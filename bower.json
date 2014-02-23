@@ -1,0 +1,18 @@
+{
+  "name": "brand-colors",
+  "version": "0.0.1",
+  "description": "A Collection with brand colors (CSS, LESS, SCSS).",
+  "authors": [
+    "Pierre Reimertz <pierre@pierrereimertz.com>"
+  ],
+  "homepage": "github.com/Reimertz/brand-colors",
+  "keywords": [
+    "brand",
+    "color",
+    "brand-color",
+    "branding"
+  ],
+  "ignore": [],
+  "dependencies": {},
+  "devDependencies": {}
+}
