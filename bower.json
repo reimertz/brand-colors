@@ -1,6 +1,6 @@
 {
   "name": "brand-colors",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Collection with brand colors (CSS, LESS, SCSS).",
   "authors": [
     "Pierre Reimertz <pierre@pierrereimertz.com>"
@@ -12,7 +12,9 @@
     "brand-color",
     "branding"
   ],
-  "ignore": [],
+  "ignore": [
+  "src/**"
+  ],
   "dependencies": {},
   "devDependencies": {}
 }

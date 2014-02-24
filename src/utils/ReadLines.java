@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class readline {
+public class ReadLines {
     public static void main(String[] args) throws Exception {
       System.out.println("Hello World!");
       BufferedReader br = new BufferedReader(new FileReader("brandcolors.less"));
