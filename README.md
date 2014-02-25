@@ -1,8 +1,3 @@
-##Caution
-
-Just updated my username here on github, created some problems over at bower. Fix is on it's way..
-
-
 ##Introduction
 
 Just wanted to make branding colors a bit more easy to access, so I created
