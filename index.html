@@ -83,6 +83,11 @@ div[class^="bc-"]:hover {
   opacity: 0.5;
 }
 
+div[class^="bc-"].selected {
+  transition:200ms;
+  background-color: white;
+}
+
 </style>
 </head>
 <body>
@@ -395,6 +400,36 @@ function getContrastYIQ(hexcolor){
 
   return (yiq >= 128) ? 'black' : 'white';
 }
+  
+  var mouseOver = document.createEvent( 'Events' );
+  mouseOver.initEvent( 'mouseover', true, false );
+
+  var mouseOut = document.createEvent( 'Events' );
+  mouseOut.initEvent( 'mouseout', true, false );
+
+    
+  setTimeout(function(){
+      companyDivs[9].dispatchEvent(mouseOver);
+      companyDivs[9].classList.add("selected");
+    },1000);
+  
+  setTimeout(function(){
+    companyDivs[9].classList.remove("selected");
+    companyDivs[10].dispatchEvent(mouseOver);
+    companyDivs[10].classList.add("selected");
+    },1500);
+  
+  setTimeout(function(){
+    companyDivs[10].classList.remove("selected");
+    companyDivs[11].dispatchEvent(mouseOver);
+    companyDivs[11].classList.add("selected");
+    },2000);
+  
+
+  setTimeout(function(){
+    companyDivs[11].dispatchEvent(mouseOut);
+    companyDivs[11].classList.remove("selected");
+  }, 2500);
 </script>
 </body>
 </html>
