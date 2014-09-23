@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     g = require('gulp-load-plugins')({lazy: false}),
     noop = g.util.noop,
     swig = require('gulp-swig'),
-    companies = require('../data/brandColors.js').getAllBrandColors(),
+    companies = require('../data/brandColors.js').getAll(),
     version = require('../package.json').version,
     template = {
       version: version,

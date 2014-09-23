@@ -12,7 +12,6 @@ bower install brand-colors
 
 ###Usage
 
-
 ####scss
 ```scss
 @import 'bower_components/brand-colors/latest/scss/brand-colors.scss'
@@ -21,7 +20,6 @@ bower install brand-colors
   color: $spotify;
 }
 ```
-
 ####less
 ```css
 @import 'bower_components/brand-colors/latest/less/brand-colors.less'
@@ -30,7 +28,6 @@ bower install brand-colors
   color: @spotify;
 }
 ```
-
 ####sass
 ```sass
 @import 'bower_components/brand-colors/latest/sass/brand-colors.sass'
@@ -38,7 +35,6 @@ bower install brand-colors
 .a-div 
   color: $spotify
 ```
-
 ####css
 
 ```html

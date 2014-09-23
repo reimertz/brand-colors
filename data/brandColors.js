@@ -697,15 +697,15 @@ var brandColors = [{
   color: '#fc4c02'
 }];
 
-function getAllBrandColors() {
+function getAll() {
   return brandColors;
 }
 
-function getBrandColor(name) {
+function find(name) {
   brandColors.filter(function(brand){
-    return thing.name === name;
+    return brand.name === name;
   });
 }
 
-exports.getAllBrandColors = getAllBrandColors;
-exports.getBrandColor = getBrandColor;
+exports.getAll = getAll;
+exports.find = find;
