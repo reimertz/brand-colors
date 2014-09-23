@@ -1,53 +1,58 @@
-##Introduction
+#brand-colors
 
-Just wanted to make branding colors a bit more easy to access, so I created
-this bower package.
+This is a collection of branding colors from all the major companies.
 
-This is a collection with branding colors from all the major companies,
-missing a company in the list or just want to contribute? Fork! Fork! Fork!
+###Installation
 
+```
+npm install brand-colors
+bower install brand-colors
+```
 
-##Installation
-`bower install brand-colors --save`
-
-##Usage
-###CSS
-
-    <link rel="stylesheet" href="bower_components/brand-colors/css/brand-colors.css">`
-    <!-- minified version -->
-    <link rel="stylesheet" href="bower_components/brand-colors/css/brand-colors.min.css">` 
-
-####CSS class naming
-`<span class="bc-{companyname}">Company branding color as text</span>`
-
-`<div class="bc-{companyname}-bg">Company branding color as background</div>`
+###Usage
 
 
+####scss
+```scss
+@import 'bower_components/brand-colors/latest/scss/brand-colors.scss'
 
-###LESS
+.a-div {
+  color: $spotify;
+}
+```
 
-`@import 'bower_components/brand-colors/less/brand-colors.less'` *(all brands)*
+####less
+```css
+@import 'bower_components/brand-colors/latest/less/brand-colors.less'
 
-`@import 'bower_components/brand-colors/less/{companyname}.less'` (unnecessary at the moment)
+.a-div {
+  color: @spotify;
+}
+```
 
+####sass
+```sass
+@import 'bower_components/brand-colors/latest/sass/brand-colors.sass'
 
-####LESS variable naming
-@{companyname}
+.a-div 
+  color: $spotify
+```
 
+####css
 
+```html
+<head>
+  <link rel="stylesheet" href="bower_components/brand-colors/latest/css/brand-colors.css">`
+  <!-- minified version -->
+  <link rel="stylesheet" href="bower_components/brand-colors/latest/css/brand-colors.min.css">` 
+</head>
+<body>
+  <span class="bc-spotify">This text is spotify-green</span>
+  <div class="bc-spotify-bg">This div has a spotify-green background</div>
+</body>
+```
 
-###SCSS
-
-`@import 'bower_components/brand-colors/scss/brand-colors.scss'` *(all brands)*
-
-`@import 'bower_components/brand-colors/scss/**{companyname}**.scss` (unnecessary at the moment)
-
-
-####SCSS variable naming
-${companyname}
-
-
-##List of Companies
+###List of Companies
 
 * 500px
 * about-me
@@ -217,8 +222,4 @@ ${companyname}
 * zerply
 * zootool
 * zopim
-
-
-##Credits
-Thanks to brandcolors.net, wouldn't be possible without them!
 
