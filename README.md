@@ -1,4 +1,4 @@
-#brand-colors
+#[brand-colors](http://reimertz.github.io/brand-colors/)
 
 A collection of brand colors for the effective web developer.
 works flawlessly with scss, less, sass and css.
