@@ -1,6 +1,7 @@
 #brand-colors
 
-This is a collection of branding colors from all the major companies.
+A collection of brand colors for the effective web developer.
+works flawlessly with scss, less, sass and css.
 
 ###Installation
 
