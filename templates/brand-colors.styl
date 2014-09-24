@@ -1,0 +1,10 @@
+/* 
+* @preserve brand-colors {{ version }}
+* http://reimertz.github.io/brand-colors
+* (c) 2014 Pierre Reimertz
+* may be freely distributed under the MIT license.
+*/
+
+{% for company in companies %}
+$bc-{{company.name}} = {{company.color}};
+{% endfor %}
