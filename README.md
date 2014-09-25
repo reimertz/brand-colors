@@ -36,11 +36,12 @@ bower install brand-colors
   color: $spotify
 ```
 ####stylus
-```stylus
-@import 'bower_components/brand-colors/latest/sass/brand-colors.styl'
+```css
+@import 'bower_components/brand-colors/latest/stylus/brand-colors.styl'
 
-.a-div 
-  color: $spotify
+.a-div {
+  color: $spotify;
+}
 ```
 ####css
 
