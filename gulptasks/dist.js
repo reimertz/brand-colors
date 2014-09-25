@@ -12,7 +12,7 @@ var gulp = require('gulp'),
       companies: companies
     };
 
-gulp.task('styles-dist', ['render-css','render-scss','render-less', 'render-sass'], noop);
+gulp.task('styles-dist', ['render-css','render-scss','render-less', 'render-sass', 'render-stylus'], noop);
 
 gulp.task('render-scss', function () {
   return gulp.src(['templates/brand-colors.scss'])
@@ -46,6 +46,18 @@ gulp.task('render-sass', function () {
     .pipe(g.rename('brand-colors.' + version + '.sass'))
     .pipe(gulp.dest('dist/'+ version + '/sass/'));
 });
+
+gulp.task('render-stylus', function () {
+  return gulp.src(['templates/brand-colors.styl'])
+    .on('error', g.notify.onError('<%= error.message%>'))
+    .pipe(g.data(template))
+    .pipe(swig())
+    .pipe(g.rename('brand-colors.latest.styl'))
+    .pipe(gulp.dest('dist/latest/stylus/'))
+    .pipe(g.rename('brand-colors.' + version + '.styl'))
+    .pipe(gulp.dest('dist/'+ version + '/stylus/'));
+});
+
 
 gulp.task('render-css', function () {
   return gulp.src(['templates/brand-colors.css'])

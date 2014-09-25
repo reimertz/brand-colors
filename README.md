@@ -1,7 +1,7 @@
 #[brand-colors](http://reimertz.github.io/brand-colors/)
 
 A collection of brand colors for the effective web developer.
-works flawlessly with scss, less, sass and css.
+works flawlessly with scss, less, sass, stylus and css.
 
 ###Installation
 
@@ -31,6 +31,13 @@ bower install brand-colors
 ####sass
 ```sass
 @import 'bower_components/brand-colors/latest/sass/brand-colors.sass'
+
+.a-div 
+  color: $spotify
+```
+####stylus
+```stylus
+@import 'bower_components/brand-colors/latest/sass/brand-colors.styl'
 
 .a-div 
   color: $spotify
