@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>brand-colors</title>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="dist/latest/css/brand-colors.latest.min.css">
 <style type="text/css">
+
+body.copy div[class^="bc-"]:not(.clicked),
+body.copy .text,
+body.copy .companies {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
 a {
-  text-decoration: none;
-  font-weight: 700;
   color: inherit;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 a:hover {
@@ -17,47 +25,57 @@ a:hover {
 }
 
 body {
-    text-align: center;
-    transition: 250ms;
-    padding: 50px auto;
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  padding: 50px auto;
+  text-align: center;
+  transition: 200ms;
 }
 
-#show{
-    height:75px;
-    line-height: 100px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 50px; 
+#show {
+  font-size: 50px; 
+  font-weight: 400;
+  height:75px;
+  line-height: 100px;
+  text-align: center;
 }
 
 #hex{
-    height:50px;
-    line-height: 75px;
-    text-align: center;
-    font-weight: 300;
-    font-size: 25px;   
-}
-
-div.menu div {
-    width: 33.3333333%;
-    height:100px;
-    color: black;
-    text-align: center;
-    line-height:100px;
-    font-family:helvetica-light;
-    margin: auto -2px;
-    padding: 0;
-    font-size: 14px;
-    display: inline-block;
+  font-size: 25px;   
+  font-weight: 300;
+  height:50px;
+  line-height: 75px;
+  text-align: center;
 }
 
 div#companies {
+  display: inline-block;
   font-size: 0;
   position: relative;
-  display: inline-block;
   width: 810px;
-  transition: 500ms;
+}
+
+body:not(.copy) div#companies:after {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+  content: 'hover us';
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255,255,255,0.5);
+  color: white;
+  font-size: 75px;
+  font-family: 'Open sans';
+  font-weight: 300;
+  line-height: 300px;
+  transition: 200ms;
+  text-align: center;
+}
+
+body:not(.copy) div#companies:hover:after {
+  width: 0%;
+  font-size: 0;
 }
 
 @media (max-width: 850px) {
@@ -67,44 +85,59 @@ div#companies {
 }
 
 div[class^="bc-"] {
-  width: 35px;
-  height:35px;
-  color: white;
-  text-align: center;
+  cursor: pointer;
   display: inline-block;
   font-family:helvetica-light;
-  padding: 0;
-  margin: 0 0;
   font-size: 0px;
+  height:35px;
+  margin: 0 0;
+  padding: 0;
   position: relative;
+  text-align: center;
+  width: 35px;
+  transition:200ms;
 }
 
 div[class^="bc-"]:hover {
-  opacity: 0.5;
+  background-color: rgba(255,255,255,0.5);  
 }
 
 div[class^="bc-"].selected {
-  transition:200ms;
-  background-color: white;
+  background-color: white;  
+}
+
+div[class^="bc-"].clicked:after { 
+  content: 'back';
+  color: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  height: 35px;
+  left: 0;
+  line-height: 35px;
+  position: absolute;
+  width: 35px;
 }
 
 </style>
 </head>
-<body>
+<body class="no-interaction">
   <div id="show">
     brand-colors
   </div>
   <div id="hex">
     bower/npm install brand-colors
   </div>
-  <p>A collection of brand colors for the effective web developer.</p>
-  <p>works flawlessly with scss, less, sass, stylus and css.</p>
-  <p>
-    <a href="//github.com/reimertz/brand-colors">Documentation (github)</a>
-  </p>
-  <p>
-    made by <a href="//twitter.com/reimertz">@reimertz</a>
-  </p>
+  <div class="text">
+    <p>A beautiful collection of brand colors for web developers.</p>
+    <p>works flawlessly with scss, less, sass, stylus and css.</p>
+    <p>
+      <a href="//github.com/reimertz/brand-colors">Documentation (github)</a>
+    </p>
+    <p>
+      made by <a href="//twitter.com/reimertz">@reimertz</a>
+    </p>  
+  </div>
+  
   <div id="companies">
     <div class="bc-4ormat-bg">4ormat</div>
     <div class="bc-500px-bg">500px</div>
@@ -342,9 +375,15 @@ div[class^="bc-"].selected {
   var companyDivs = document.getElementById('companies').children,
       text = document.getElementById('show'),
       hex = document.getElementById('hex'),
-      background = document.body;
+      hasClicked = false,
+      background = document.body,
+      textColor = 'black',
+      hexColor = '#FFF',
+      timers = [];
 
   document.getElementById('companies').addEventListener('mouseout', function() {
+    if (hasClicked) return;
+
     text.innerHTML = 'brand-colors';
     hex.innerHTML = 'bower/npm install brand-colors';
 
@@ -353,17 +392,35 @@ div[class^="bc-"].selected {
   });
 
 [].forEach.call(companyDivs ,function(div) {
+
     div.addEventListener('mouseover', function(event) {
+      if (hasClicked) return;
+
       var name = event.currentTarget.innerHTML,
           color = getStyle(event.currentTarget, "background-color");
-          hexColor = rgb2hex(color),
-          textColor = getContrastYIQ(hexColor.substring(1));
+          
+      hexColor = rgb2hex(color);
+      textColor = getContrastYIQ(hexColor.substring(1));
 
       text.innerHTML = name;
       hex.innerHTML = hexColor;
 
       background.style.color = textColor;
       background.style.backgroundColor = color;
+    },false);
+
+    div.addEventListener('click', function(event) {
+      if (hasClicked) {
+        event.currentTarget.classList.remove('clicked');
+        document.body.classList.remove('copy');
+        hasClicked = false;
+
+        return;
+      }
+
+      hasClicked = true;
+      event.currentTarget.classList.add('clicked');
+      document.body.classList.add('copy');
     },false);
   }
 );
@@ -404,32 +461,9 @@ function getContrastYIQ(hexcolor){
   var mouseOver = document.createEvent( 'Events' );
   mouseOver.initEvent( 'mouseover', true, false );
 
-  var mouseOut = document.createEvent( 'Events' );
-  mouseOut.initEvent( 'mouseout', true, false );
-
-    
-  setTimeout(function(){
-      companyDivs[9].dispatchEvent(mouseOver);
-      companyDivs[9].classList.add("selected");
-    },1000);
-  
-  setTimeout(function(){
-    companyDivs[9].classList.remove("selected");
-    companyDivs[10].dispatchEvent(mouseOver);
-    companyDivs[10].classList.add("selected");
-    },1500);
-  
-  setTimeout(function(){
-    companyDivs[10].classList.remove("selected");
-    companyDivs[11].dispatchEvent(mouseOver);
-    companyDivs[11].classList.add("selected");
-    },2000);
+  //companyDivs[0].dispatchEvent(mouseOver);
   
 
-  setTimeout(function(){
-    companyDivs[11].dispatchEvent(mouseOut);
-    companyDivs[11].classList.remove("selected");
-  }, 2500);
 </script>
 </body>
 </html>
