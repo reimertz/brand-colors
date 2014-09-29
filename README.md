@@ -228,3 +228,5 @@ bower install brand-colors
 * zootool
 * zopim
 
+##Credits
+Thanks to brandcolors.net, wouldn't be possible without them!

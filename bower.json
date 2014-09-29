@@ -14,7 +14,8 @@
   ],
   "main": "/dist/",
   "ignore": [
-  "node-modules/**"
+  "node-modules/**",
+  "CNAME"
   ],
   "dependencies": {},
   "devDependencies": {}
