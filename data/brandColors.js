@@ -261,6 +261,10 @@ var brandColors = [{
   name: 'fab-com',
   color: '#dd0017'
 },{
+  /**
+   * https://www.facebookbrand.com/
+   * Download "f" logo Online (low res) package. RGB value derived from PSD.
+   */
   name: 'facebook',
   color: '#3b5998'
 },{
@@ -306,7 +310,11 @@ var brandColors = [{
   name: 'google-5',
   color: '#e7e6dd'
 },{
-  name: 'google',
+  /**
+   * https://developers.google.com/+/branding-guidelines
+   * "The color for an unpressed red button is #dd4b39."
+   */
+  name: 'googleplus',
   color: '#dd4b39'
 },{
   name: 'grooveshark',
@@ -375,8 +383,12 @@ var brandColors = [{
   name: 'lastfm',
   color: '#c3000d'
 },{
+  /**
+   * http://press.linkedin.com/Media-Resources?SubjectID=644
+   * Download PNG logo. RGB value derived from PNG.
+   */
   name: 'linkedin',
-  color: '#0e76a8'
+  color: '#007bb6'
 },{
   name: 'livestream',
   color: '#cf0005'
@@ -423,8 +435,12 @@ var brandColors = [{
   name: 'pinboard',
   color: '#0000e6'
 },{
+  /**
+   * https://business.pinterest.com/en/brand-guidelines
+   * Download Pinterest logo. RGB value derived from PNG.
+   */
   name: 'pinterest',
-  color: '#c8232c'
+  color: '#cc2127'
 },{
   name: 'playstation',
   color: '#665cbe'
@@ -438,6 +454,10 @@ var brandColors = [{
   name: 'pusha',
   color: '#0f71b4'
 },{
+  /**
+   * http://www.quora.com/press
+   * Download Press Kit. RGB value derived from PNG.
+   */
   name: 'quora',
   color: '#a82400'
 },{
@@ -543,12 +563,20 @@ var brandColors = [{
   name: 'trulia',
   color: '#5eab1f'
 },{
+  /**
+   * http://www.tumblr.com/logo
+   * "We generally prefer that you use our blue (#35465c)"
+   */
   name: 'tumblr',
-  color: '#34526f'
+  color: '#35465c'
 },{
   name: 'twitch-tv',
   color: '#6441a5'
 },{
+  /**
+   * https://about.twitter.com/press/brand-assets
+   * see: Colors -> Primary Color
+   */
   name: 'twitter',
   color: '#55acee'
 },{
@@ -612,8 +640,12 @@ var brandColors = [{
   name: 'yelp',
   color: '#c41200'
 },{
+  /**
+   * https://www.youtube.com/yt/brand/color.html
+   * see: Flat color specifications
+   */
   name: 'youtube',
-  color: '#c4302b'
+  color: '#cd201f'
 },{
   name: 'zalongo',
   color: '#5498dc'
