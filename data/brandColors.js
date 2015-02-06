@@ -702,7 +702,7 @@ function getAll() {
 }
 
 function find(name) {
-  brandColors.filter(function(brand){
+  return brandColors.filter(function(brand){
     return brand.name === name;
   });
 }
