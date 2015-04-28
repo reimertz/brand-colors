@@ -1,6 +1,6 @@
 {
   "name": "brand-colors",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A collection of branding colors of all the major companies.",
   "homepage": "https://reimertz.github.io/brand-colors",
   "main": "data/brandColors.js",
@@ -11,7 +11,6 @@
   "keywords": [
     "branding",
     "brand colors",
-    "brand-colors",
     "colors"
   ],
   "author": "Piérre Reimertz",
@@ -31,9 +30,7 @@
     "opn": "~1.0.0",
     "gulp-markdown": "~0.2.0",
     "gulp-clean": "~0.3.1",
-    "gulp-util": "~3.0.0"
-  },
-  "dependencies": {
+    "gulp-util": "~3.0.0",
     "gulp-data": "^1.0.2",
     "gulp-rename": "^1.2.0",
     "gulp-swig": "^0.7.2",
