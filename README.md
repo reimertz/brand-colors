@@ -14,7 +14,7 @@ bower install brand-colors
 
 ####scss
 ```scss
-@import 'bower_components/brand-colors/latest/scss/brand-colors.scss'
+@import 'bower_components/brand-colors/dist/latest/scss/brand-colors.latest.scss'
 
 .a-div {
   color: $spotify;
@@ -22,7 +22,7 @@ bower install brand-colors
 ```
 ####less
 ```css
-@import 'bower_components/brand-colors/latest/less/brand-colors.less'
+@import 'bower_components/brand-colors/dist/latest/less/brand-colors.latest.less'
 
 .a-div {
   color: @spotify;
@@ -30,14 +30,14 @@ bower install brand-colors
 ```
 ####sass
 ```sass
-@import 'bower_components/brand-colors/latest/sass/brand-colors.sass'
+@import 'bower_components/brand-colors/dist/latest/scss/brand-colors.latest.sass'
 
 .a-div 
   color: $spotify
 ```
 ####stylus
 ```css
-@import 'bower_components/brand-colors/latest/stylus/brand-colors.styl'
+@import 'bower_components/brand-colors/dist/latest/stylus/brand-colors.latest.styl'
 
 .a-div {
   color: $spotify;
@@ -47,9 +47,9 @@ bower install brand-colors
 
 ```html
 <head>
-  <link rel="stylesheet" href="bower_components/brand-colors/latest/css/brand-colors.css">`
+  <link rel="stylesheet" href="bower_components/brand-colors/dist/latest/css/brand-colors.latest.css">`
   <!-- minified version -->
-  <link rel="stylesheet" href="bower_components/brand-colors/latest/css/brand-colors.min.css">` 
+  <link rel="stylesheet" href="bower_components/brand-colors/dist/latest/css/brand-colors.latest.min.css">` 
 </head>
 <body>
   <span class="bc-spotify">This text is spotify-green</span>
