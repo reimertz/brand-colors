@@ -38,7 +38,7 @@ a:hover {
 
 #show {
   transition: 200ms;
-  font-size: 50px; 
+  font-size: 50px;
   font-weight: 400;
   height:75px;
   line-height: 100px;
@@ -48,7 +48,7 @@ a:hover {
 #hex {
   position: relative;
   transition: 200ms;
-  font-size: 25px;   
+  font-size: 25px;
   font-weight: 300;
   height:50px;
   line-height: 75px;
@@ -140,14 +140,14 @@ div[class^="bc-"] {
 }
 
 div[class^="bc-"]:hover {
-  background-color: rgba(255,255,255,0.5);  
+  background-color: rgba(255,255,255,0.5);
 }
 
 div[class^="bc-"].selected {
-  background-color: white;  
+  background-color: white;
 }
 
-div[class^="bc-"].clicked:after { 
+div[class^="bc-"].clicked:after {
   content: 'back';
   color: inherit;
   font-size: 10px;
@@ -182,7 +182,7 @@ div[class^="bc-"].clicked:after {
   line-height: 1em;
   margin-left: .2em;
 }
- 
+
 .icon-copy:before { font-family: "fontello";content: '\e800';}
 
 </style>
@@ -196,7 +196,7 @@ div[class^="bc-"].clicked:after {
       bower/npm install brand-colors
     </div>
   </div>
-  
+
   <div class="text">
     <p>A beautiful collection of brand colors for web developers.</p>
     <p>works flawlessly with scss, less, sass, stylus and css.</p>
@@ -205,7 +205,7 @@ div[class^="bc-"].clicked:after {
     </p>
     <p>
       made by <a href="//twitter.com/reimertz">@reimertz</a>
-    </p>  
+    </p>
   </div>
 
   <div id="companies">
@@ -350,6 +350,7 @@ div[class^="bc-"].clicked:after {
     <div class="bc-makita-2-bg">makita-2</div>
     <div class="bc-makita-bg">makita</div>
     <div class="bc-meetup-bg">meetup</div>
+    <div class="bc-mic-bg">mic</div>
     <div class="bc-microsoft-2-bg">microsoft-2</div>
     <div class="bc-microsoft-3-bg">microsoft-3</div>
     <div class="bc-microsoft-4-bg">microsoft-4</div>
@@ -486,7 +487,7 @@ div[class^="bc-"].clicked:after {
 
       var name = event.currentTarget.innerHTML,
           color = getStyle(event.currentTarget, "background-color");
-          
+
       hexColor = rgb2hex(color);
       textColor = getContrastYIQ(hexColor.substring(1));
 
@@ -532,7 +533,7 @@ function getStyle(oElm, strCssRule){
 
 function rgb2hex(rgb) {
   rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
-  
+
   function hex(x) {
       return ("0" + parseInt(x).toString(16)).slice(-2);
   }
@@ -548,12 +549,12 @@ function getContrastYIQ(hexcolor){
 
   return (yiq >= 128) ? 'black' : 'white';
 }
-  
+
   var mouseOver = document.createEvent( 'Events' );
   mouseOver.initEvent( 'mouseover', true, false );
 
   //companyDivs[0].dispatchEvent(mouseOver);
-  
+
 
 </script>
 </body>

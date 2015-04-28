@@ -695,6 +695,9 @@ var brandColors = [{
 },{
   name: 'strava',
   color: '#fc4c02'
+}, {
+  name: 'mic',
+  color: '#21c1ff'
 }];
 
 function getAll() {

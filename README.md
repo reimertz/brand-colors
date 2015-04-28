@@ -32,7 +32,7 @@ bower install brand-colors
 ```sass
 @import 'bower_components/brand-colors/dist/latest/scss/brand-colors.latest.sass'
 
-.a-div 
+.a-div
   color: $spotify
 ```
 ####stylus
@@ -49,7 +49,7 @@ bower install brand-colors
 <head>
   <link rel="stylesheet" href="bower_components/brand-colors/dist/latest/css/brand-colors.latest.css">`
   <!-- minified version -->
-  <link rel="stylesheet" href="bower_components/brand-colors/dist/latest/css/brand-colors.latest.min.css">` 
+  <link rel="stylesheet" href="bower_components/brand-colors/dist/latest/css/brand-colors.latest.min.css">`
 </head>
 <body>
   <span class="bc-spotify">This text is spotify-green</span>
@@ -147,6 +147,7 @@ bower install brand-colors
 * lumo
 * makita
 * meetup
+* mic
 * microsoft
 * mixpanel
 * netflix
