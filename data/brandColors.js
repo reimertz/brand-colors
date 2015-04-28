@@ -1,4 +1,4 @@
-/* 
+/*
 * @preserve brand-colors {{ version }}
 * http://reimertz.github.io/brand-colors
 * (c) 2014 Pierre Reimertz
@@ -277,7 +277,7 @@ var brandColors = [{
   color: '#5b9a68'
 },{
   name: 'foursquare',
-  color: '#25a0ca'
+  color: '#F94877'
 },{
   name: 'garmin',
   color: '#007cc3'
