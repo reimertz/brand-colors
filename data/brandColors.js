@@ -525,6 +525,10 @@ var brandColors = [{
   name: 'stumbleupon',
   color: '#f74425'
 },{
+},{
+  name: 'swarm',
+  color: '#fd9627'
+}
   name: 't-mobile',
   color: '#ea0a8e'
 },{

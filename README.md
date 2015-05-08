@@ -194,6 +194,7 @@ bower install brand-colors
 * stripe
 * studyblue
 * stumbleupon
+* swarm
 * t-mobile
 * technorati
 * the-next-web
