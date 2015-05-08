@@ -179,6 +179,7 @@ bower install brand-colors
 * samsung
 * shopify
 * skype
+* slack
 * smashing-magazine
 * snagajob
 * softonic

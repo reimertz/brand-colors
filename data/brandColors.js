@@ -483,6 +483,18 @@ var brandColors = [{
   name: 'skype',
   color: '#00aff0'
 },{
+  name: 'slack'
+  color: '#6fcbdc'
+},{
+  name: 'slack-2'
+  color: '#e9a821'
+},{
+  name: 'slack-3'
+  color: '#e11664'
+},{
+  name: 'slack-4'
+  color: '#3fba91'
+},{
   name: 'smashing-magazine',
   color: '#f0503a'
 },{
@@ -524,7 +536,6 @@ var brandColors = [{
 },{
   name: 'stumbleupon',
   color: '#f74425'
-},{
 },{
   name: 'swarm',
   color: '#fd9627'
