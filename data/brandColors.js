@@ -351,6 +351,9 @@ var brandColors = [{
   name: 'imdb',
   color: '#f3ce13'
 },{
+  name: 'imgur',
+  color: '#85bf25'
+},{
   name: 'instagram',
   color: '#3f729b'
 },{
