@@ -131,6 +131,7 @@ bower install brand-colors
 * ibm
 * ikea
 * imdb
+* imgur
 * instagram
 * instapaper
 * intel
