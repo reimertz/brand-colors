@@ -217,6 +217,7 @@ bower install brand-colors
 * virb
 * virgin-media
 * vkontakte
+* wolfram-alpha
 * wooga
 * wordpress
 * wunderlist

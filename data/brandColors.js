@@ -600,6 +600,9 @@ var brandColors = [{
   name: 'vkontakte',
   color: '#45668e'
 },{
+  name: 'wolfram-alpha',
+  color: '#f68d1e'
+},{
   name: 'wooga',
   color: '#5b009c'
 },{
