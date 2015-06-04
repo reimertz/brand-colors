@@ -506,16 +506,16 @@ var brandColors = [{
   name: 'skype',
   color: '#00aff0'
 },{
-  name: 'slack'
+  name: 'slack',
   color: '#6fcbdc'
 },{
-  name: 'slack-2'
+  name: 'slack-2',
   color: '#e9a821'
 },{
-  name: 'slack-3'
+  name: 'slack-3',
   color: '#e11664'
 },{
-  name: 'slack-4'
+  name: 'slack-4',
   color: '#3fba91'
 },{
   name: 'smashing-magazine',
@@ -562,7 +562,7 @@ var brandColors = [{
 },{
   name: 'swarm',
   color: '#fd9627'
-}
+},{
   name: 't-mobile',
   color: '#ea0a8e'
 },{
