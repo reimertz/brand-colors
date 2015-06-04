@@ -131,6 +131,7 @@ bower install brand-colors
 * ibm
 * ikea
 * imdb
+* imgur
 * instagram
 * instapaper
 * intel
@@ -179,6 +180,7 @@ bower install brand-colors
 * samsung
 * shopify
 * skype
+* slack
 * smashing-magazine
 * snagajob
 * softonic
@@ -194,6 +196,7 @@ bower install brand-colors
 * stripe
 * studyblue
 * stumbleupon
+* swarm
 * t-mobile
 * technorati
 * the-next-web
@@ -214,6 +217,7 @@ bower install brand-colors
 * virb
 * virgin-media
 * vkontakte
+* wolfram-alpha
 * wooga
 * wordpress
 * wunderlist

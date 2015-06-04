@@ -351,6 +351,9 @@ var brandColors = [{
   name: 'imdb',
   color: '#f3ce13'
 },{
+  name: 'imgur',
+  color: '#85bf25'
+},{
   name: 'instagram',
   color: '#3f729b'
 },{
@@ -483,6 +486,18 @@ var brandColors = [{
   name: 'skype',
   color: '#00aff0'
 },{
+  name: 'slack'
+  color: '#6fcbdc'
+},{
+  name: 'slack-2'
+  color: '#e9a821'
+},{
+  name: 'slack-3'
+  color: '#e11664'
+},{
+  name: 'slack-4'
+  color: '#3fba91'
+},{
   name: 'smashing-magazine',
   color: '#f0503a'
 },{
@@ -525,6 +540,9 @@ var brandColors = [{
   name: 'stumbleupon',
   color: '#f74425'
 },{
+  name: 'swarm',
+  color: '#fd9627'
+}
   name: 't-mobile',
   color: '#ea0a8e'
 },{
@@ -581,6 +599,9 @@ var brandColors = [{
 },{
   name: 'vkontakte',
   color: '#45668e'
+},{
+  name: 'wolfram-alpha',
+  color: '#f68d1e'
 },{
   name: 'wooga',
   color: '#5b009c'
