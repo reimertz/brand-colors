@@ -147,6 +147,7 @@ bower install brand-colors
 * livestream
 * lumo
 * makita
+* mailru
 * meetup
 * mic
 * microsoft
