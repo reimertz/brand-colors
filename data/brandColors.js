@@ -54,6 +54,9 @@ var brandColors = [{
   name: 'aim',
   color: '#ffd900'
 },{
+  name: 'airbnb',
+  color: '#fd5c63'
+},{
   name: 'amazon',
   color: '#ff9900'
 },{
@@ -578,6 +581,9 @@ var brandColors = [{
   name: 'trello',
   color: '#256a92'
 },{
+  name: 'tripadvisor',
+  color: '#589442'
+},{
   name: 'trulia',
   color: '#5eab1f'
 },{
@@ -604,6 +610,19 @@ var brandColors = [{
   name: 'typo3',
   color: '#ff8700'
 },{
+  /**
+   * http://brand.uber.com/
+   * see: Color Palette
+   */
+  name: 'uber',
+  color: '#09091a'
+},{
+  name: 'uber-2',
+  color: '#c0c0c8'
+},{
+  name: 'uber-3',
+  color: '#1fbad6'
+},{
   name: 'ubuntu',
   color: '#dd4814'
 },{
@@ -627,6 +646,18 @@ var brandColors = [{
 },{
   name: 'vkontakte',
   color: '#45668e'
+},{
+  name: 'wechat',
+  color: '#7bb32e'
+},{
+  name: 'weibo',
+  color: '#e71d34'
+},{
+  name: 'weixin',
+  color: '#93d034'
+},{
+  name: 'whatsapp',
+  color: '#4dc247'
 },{
   name: 'wolfram-alpha',
   color: '#f68d1e'
