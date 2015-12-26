@@ -12,7 +12,13 @@
     "brand-color",
     "branding"
   ],
-  "main": "/dist/",
+  "main": [
+    "dist/latest/css/brand-colors.latest.css",
+    "dist/latest/less/brand-colors.latest.less",
+    "dist/latest/sass/brand-colors.latest.sass",
+    "dist/latest/scss/brand-colors.latest.scss",
+    "dist/latest/stylus/brand-colors.latest.styl"
+  ],
   "ignore": [
   "node-modules/**",
   "CNAME"
