@@ -64,6 +64,7 @@ bower install brand-colors
 * addvocate
 * adobe
 * aim
+* airbnb
 * amazon
 * android
 * angies-list
@@ -199,10 +200,12 @@ bower install brand-colors
 * stumbleupon
 * swarm
 * t-mobile
+* uber
 * technorati
 * the-next-web
 * treehouse
 * trello
+* tripadvisor
 * trulia
 * tumblr
 * twitch-tv
@@ -218,6 +221,10 @@ bower install brand-colors
 * virb
 * virgin-media
 * vkontakte
+* wechat
+* weibo
+* weixin
+* whatsapp
 * wolfram-alpha
 * wooga
 * wordpress
