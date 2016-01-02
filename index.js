@@ -142,7 +142,7 @@ var companySquares = document.getElementById('companies').children,
   })();
 
   filter.addEventListener('keyup', function(event){
-    var text = event.target.value;
+    var text = event.target.value.toLowerCase();
     var filter = 'li:not([class*="' + text + '"])';
 
     if (hasClicked) return;
@@ -153,9 +153,3 @@ var companySquares = document.getElementById('companies').children,
     if(text.length == 0 ) return;
     sheet.addRule(filter, 'width:0 !important',  0);
   })
-
-  document.body.style.opacity = 1;
-
-window.onload = function(e) {
-  window.scrollTo( 0, 350 );
-}

@@ -260,22 +260,8 @@ nav {
   text-align: center;
 }
 
-#morphy {
-  font-size: 25px;
-  font-weight: 300;
-  margin: 0;
-}
-
 #intro {
   transition: 200ms;
-}
-
-#cpy {
-  font-family: "fontello";
-  content: '\e800';
-  margin-left: 10px;
-  opacity: 0;
-  position: absolute;
 }
 
 main {
@@ -311,6 +297,7 @@ input#filter {
   outline: none;
   font-weight: 500;
   text-transform: uppercase;
+  border-radius: 0;
 }
 input#filter:hover,
 input#filter:focus {
@@ -322,7 +309,8 @@ ol#companies {
   display: inline-block;
   text-align: left;
   padding: 0;
-
+  font-size: 0px;
+  line-height: 0px;
 }
 ol li:first-child {
   margin-left: 140px;
@@ -331,7 +319,6 @@ ol li:first-child {
 li[class^="bc-"] {
   cursor: pointer;
   display: inline-block;
-  font-family:helvetica-light;
   font-size: 0px;
   height:35px;
   margin: 0 0;
@@ -348,18 +335,6 @@ li[class^="bc-"]:hover {
 
 li[class^="bc-"].selected {
   background-color: white;
-}
-
-li[class^="bc-"].clicked:after {
-  content: 'back';
-  color: inherit;
-  font-size: 10px;
-  font-weight: 700;
-  height: 35px;
-  left: 0;
-  line-height: 35px;
-  position: absolute;
-  width: 35px;
 }
 
 body:not(.copy) ol#companies:hover:after {
