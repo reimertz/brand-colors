@@ -399,6 +399,12 @@ var brandColors = [{
   name: 'lumo',
   color: '#576396'
 },{
+  name: 'mailru',
+  color: '#168de2'
+},{
+  name: 'mailru-2',
+  color: '#ffa930'
+},{
   name: 'makita',
   color: '#d82028'
 },{
