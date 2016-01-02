@@ -1,29 +1,25 @@
 var companySquares = document.getElementById('companies').children,
-      text = document.getElementById('brand-name'),
-      hex = document.getElementById('hex'),
-      hasClicked = false,
-      background = document.body,
-      textColor = 'black',
-      hexColor = '#FFF',
-      filter = document.getElementById('filter');
+    isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+                navigator.userAgent && !navigator.userAgent.match('CriOS'),
+    isIOS = navigator.userAgent && navigator.userAgent.indexOf('iPhone') > -1 ||
+            navigator.userAgent && navigator.userAgent.indexOf('iPad') > -1,
+    text = document.getElementById('brand-name'),
+    hex = document.getElementById('hex'),
+    hasClicked = false,
+    background = document.body,
+    textColor = 'black',
+    hexColor = '#FFF',
+    filter = document.getElementById('filter');
 
+  // Helper Functions
 
-  client = new Clipboard(companySquares, {
-    text: function(trigger) {
-      return document.getElementById('hex').innerHTML;
-    }
-  });
-
-  client.on('success', function(event){
-    event.trigger.setAttribute('aria-label', 'Copied!');
-    event.trigger.classList.add('tooltipped');
-    event.trigger.classList.add('tooltipped-n');
-    setTimeout(function(){
-      event.trigger.classList.add('tooltipped');
-      event.trigger.classList.remove('tooltipped-n');
-    },3000)
-
-  })
+  function selectElementContents(el) {
+      var range = document.createRange();
+      range.selectNodeContents(el);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+  }
 
   function changeBackground(event) {
     if (hasClicked) return;
@@ -35,8 +31,6 @@ var companySquares = document.getElementById('companies').children,
 
       text.innerHTML = name;
       hex.innerHTML = hexColor;
-      hex.setAttribute('data-clipboard-text', hexColor);
-
 
       background.style.color = textColor;
       background.style.backgroundColor = color;
@@ -100,30 +94,6 @@ var companySquares = document.getElementById('companies').children,
     return (yiq >= 128) ? 'black' : 'white';
   }
 
-  function throttle(fn, threshhold, scope) {
-    threshhold || (threshhold = 250);
-    var last,
-        deferTimer;
-    return function () {
-      var context = scope || this;
-
-      var now = +new Date,
-          args = arguments;
-      if (last && now < last + threshhold) {
-        // hold on to it
-        clearTimeout(deferTimer);
-        deferTimer = setTimeout(function () {
-          last = now;
-          fn.apply(context, args);
-        }, threshhold);
-      } else {
-        last = now;
-        fn.apply(context, args);
-      }
-    };
-  }
-
-
   document.getElementById('companies').addEventListener('mouseout', resetState);
 
 
@@ -131,6 +101,41 @@ var companySquares = document.getElementById('companies').children,
       div.addEventListener('mouseover', changeBackground);
     }
   );
+
+    client = new Clipboard(companySquares, {
+    text: function(trigger) {
+      return document.getElementById('hex').innerHTML;
+    }
+  });
+
+  client.on('success', function(event){
+    event.trigger.setAttribute('aria-label', event.text + ' copied!');
+    event.trigger.classList.add('tooltipped');
+    event.trigger.classList.add('tooltipped-n');
+    setTimeout(function(){
+      event.trigger.classList.add('tooltipped');
+      event.trigger.classList.remove('tooltipped-n');
+    },3000)
+
+  })
+
+  client.on('error', function(event){
+    if(!isIOS){
+      hex.setAttribute('aria-label', 'Press ' + ((isSafari) ? '⌘' : 'CTRL') + '-S to copy');
+      hex.classList.add('tooltipped');
+      hex.classList.add('tooltipped-s');
+
+      setTimeout(function(){
+        hex.classList.remove('tooltipped');
+        hex.classList.remove('tooltipped-s');
+      }, 2000)
+    }
+
+    hex.focus();
+    requestAnimationFrame(function() {
+      selectElementContents(hex);
+    });
+  })
 
   var sheet = (function() {
     var style = document.createElement("style");

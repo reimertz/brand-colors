@@ -7,7 +7,7 @@
   z-index: 1000000;
   display: none;
   padding: 5px 8px;
-  font: normal normal 11px/1.5 "Open Sans";
+  font: normal normal 15px/1.5 "Open Sans";
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -260,6 +260,22 @@ nav {
   text-align: center;
 }
 
+#hex {
+  outline: none;
+}
+
+#hex::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: black;
+  padding: 2px 10px;
+}
+
+#hex::selection {
+  color: white;
+  background: black;
+  padding: 2px 10px;
+}
+
 #intro {
   transition: 200ms;
 }
@@ -358,7 +374,7 @@ body:not(.copy) ol#companies:hover:after {
   }
 
   #hex {
-   font-size: 12px;
+    font-size: 12px;
   }
 
   body.copy #hex {
@@ -372,6 +388,8 @@ body:not(.copy) ol#companies:hover:after {
 
   main > section {
     text-align: center;
+    font-size: 0;
+    line-height: 0;
   }
 
   ol#companies {
