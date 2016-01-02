@@ -1,3 +1,200 @@
+body {
+  background: rgba(255,255,255,0.9);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  transition: background-color 200ms;
+  position: relative;
+}
+
+body.copy li[class^="bc-"]:not(.clicked),
+body.copy .intro,
+body.copy #filter {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+body.copy #cpy {
+  opacity: 1;
+}
+body.copy #brand-name {
+  font-size: 50px;
+}
+
+body.copy #hex {
+  font-size: 20px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+  z-index: 1;
+  height: 200px;
+  background-color: inherit;
+  z-index: 2;
+}
+
+#brand-name {
+  transition: 200ms;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 25px;
+  text-align: center;
+}
+
+#hex {
+  outline: none;
+}
+
+#hex::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: black;
+  padding: 2px 10px;
+}
+
+#hex::selection {
+  color: white;
+  background: black;
+  padding: 2px 10px;
+}
+
+#intro {
+  transition: 200ms;
+}
+
+main {
+  margin-top: 250px;
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+  width: 810px;
+  text-align: left;
+}
+
+main > section {
+  text-align: left;
+}
+
+::-webkit-input-placeholder {
+   color: inherit;
+}
+
+
+input#filter {
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 35px;
+  border: none;
+  background: tomato;
+  width: 132px;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  padding-left: 8px;
+  outline: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+input#filter:hover,
+input#filter:focus {
+
+}
+
+ol#companies {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  padding: 0;
+  font-size: 0px;
+  line-height: 0px;
+}
+ol li:first-child {
+  margin-left: 140px;
+}
+
+li[class^="bc-"] {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0px;
+  height:35px;
+  margin: 0 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 35px;
+  transition: width 350ms;
+}
+
+li[class^="bc-"]:hover {
+
+}
+
+li[class^="bc-"].selected {
+  background-color: white;
+}
+
+body:not(.copy) ol#companies:hover:after {
+  width: 0%;
+  font-size: 0;
+}
+
+@media (max-width: 850px) {
+  #brand-name {
+    font-size: 28px;
+  }
+
+  body.copy #brand-name {
+   font-size: 30px;
+  }
+
+  .text {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  #hex {
+    font-size: 12px;
+  }
+
+  body.copy #hex {
+   font-size: 16px;
+  }
+
+  main {
+    width: 90%;
+    text-align: left;
+  }
+
+  main > section {
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  ol#companies {
+    width: 315px;
+  }
+}
+
+
 .tooltipped {
   position: relative;
 }
@@ -173,225 +370,3 @@
 .tooltipped-sticky.tooltipped-multiline:after {
   display: table-cell;
 }
-
-@font-face {
-    font-family: 'fontello';
-    src: url(data:application/x-font-woff;charset=utf-8;base64,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) format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
- [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1em;
-  margin-left: .2em;
-}
-
-.icon-copy:before { font-family: "fontello";content: '\e800';}
-
-
-body {
-  background: rgba(255,255,255,0.9);
-  font-family: 'Open Sans', sans-serif;
-  margin: 0 auto 50px auto;
-  text-align: center;
-  transition: background-color 200ms;
-  position: relative;
-}
-
-body.copy li[class^="bc-"]:not(.clicked),
-body.copy .intro,
-body.copy #filter {
-  opacity: 0.1;
-  pointer-events: none;
-}
-
-a {
-  color: inherit;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-body.copy #cpy {
-  opacity: 1;
-}
-body.copy #brand-name {
-  font-size: 50px;
-}
-
-body.copy #hex {
-  font-size: 20px;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 50px;
-  z-index: 1;
-  height: 200px;
-  background-color: inherit;
-  z-index: 2;
-}
-
-#brand-name {
-  transition: 200ms;
-  font-size: 50px;
-  font-weight: 400;
-  margin: 0;
-  line-height: 25px;
-  text-align: center;
-}
-
-#hex {
-  outline: none;
-}
-
-#hex::-moz-selection { /* Code for Firefox */
-  color: white;
-  background: black;
-  padding: 2px 10px;
-}
-
-#hex::selection {
-  color: white;
-  background: black;
-  padding: 2px 10px;
-}
-
-#intro {
-  transition: 200ms;
-}
-
-main {
-  margin-top: 250px;
-  display: inline-block;
-  font-size: 0;
-  position: relative;
-  width: 810px;
-  text-align: left;
-}
-
-main > section {
-  text-align: left;
-}
-
-::-webkit-input-placeholder {
-   color: inherit;
-}
-
-
-input#filter {
-  color: white;
-  margin: 0;
-  padding: 0;
-  line-height: 35px;
-  border: none;
-  background: tomato;
-  width: 132px;
-  display: inline-block;
-  position: absolute;
-  z-index: 1;
-  padding-left: 8px;
-  outline: none;
-  font-weight: 500;
-  text-transform: uppercase;
-  border-radius: 0;
-}
-input#filter:hover,
-input#filter:focus {
-
-}
-
-ol#companies {
-  position: relative;
-  display: inline-block;
-  text-align: left;
-  padding: 0;
-  font-size: 0px;
-  line-height: 0px;
-}
-ol li:first-child {
-  margin-left: 140px;
-}
-
-li[class^="bc-"] {
-  cursor: pointer;
-  display: inline-block;
-  font-size: 0px;
-  height:35px;
-  margin: 0 0;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  width: 35px;
-  transition: width 350ms;
-}
-
-li[class^="bc-"]:hover {
-
-}
-
-li[class^="bc-"].selected {
-  background-color: white;
-}
-
-body:not(.copy) ol#companies:hover:after {
-  width: 0%;
-  font-size: 0;
-}
-
-@media (max-width: 850px) {
-  #brand-name {
-    font-size: 28px;
-  }
-
-  body.copy #brand-name {
-   font-size: 30px;
-  }
-
-  .text {
-    padding: 10px;
-    font-size: 12px;
-    text-align: center;
-  }
-
-  #hex {
-    font-size: 12px;
-  }
-
-  body.copy #hex {
-   font-size: 16px;
-  }
-
-  main {
-    width: 90%;
-    text-align: left;
-  }
-
-  main > section {
-    text-align: center;
-    font-size: 0;
-    line-height: 0;
-  }
-
-  ol#companies {
-    width: 315px;
-  }
