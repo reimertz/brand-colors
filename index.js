@@ -95,11 +95,11 @@ var companySquares = document.getElementById('companies').children,
     var text = event.target.value.toLowerCase();
     var search = 'li:not([class*="' + text + '"])';
 
-    if(text.length == 0 ) return;
-
     for(var i = 0; i < sheet.rules.length; i++) {
       sheet[(sheet.removeRule ? 'removeRule' : 'deleteRule')](0);
     }
+
+    if(text.length == 0 ) return;
 
     sheet[(sheet.addRule ? 'addRule' : 'insertRule')]
       (search, 'width:0 !important',  0);
