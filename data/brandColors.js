@@ -718,6 +718,7 @@ var _brandColors = {
   'plasso-4': '#2f3148',
   'plaxo': '#414f5a',
   'playstation': '#003087',
+  'playstr': '#d91e18',
   'pocket': '#ef4056',
   'pocket-2': '#50bcb6',
   'portfolium': '#0099ff',
