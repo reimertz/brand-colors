@@ -1,6 +1,6 @@
 {
   "name": "brand-colors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Collection with brand colors (CSS, LESS, SCSS, Stylus).",
   "authors": [
     "Pierre Reimertz <pierre@pierrereimertz.com>"

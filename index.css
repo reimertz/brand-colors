@@ -77,6 +77,10 @@ nav {
   transition: 200ms;
 }
 
+.square {
+  font-family:initial;
+}
+
 main {
   margin-top: 250px;
   display: inline-block;
@@ -93,7 +97,6 @@ main > section {
 ::-webkit-input-placeholder {
    color: inherit;
 }
-
 
 input#search {
   color: white;

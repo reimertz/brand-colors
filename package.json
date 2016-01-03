@@ -1,6 +1,6 @@
 {
   "name": "brand-colors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of branding colors of all the major companies.",
   "homepage": "https://reimertz.github.io/brand-colors",
   "main": "data/brandColors.js",
