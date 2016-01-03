@@ -326,6 +326,7 @@ pizza-hut
 plasso
 plaxo
 playstation
+playstr
 pocket
 portfolium
 postmates
