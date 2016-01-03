@@ -71,9 +71,11 @@ var companyContainer = document.getElementById('companies'),
 
   function updateState(event) {
     var name = event.target.innerHTML,
-    color = getStyle(event.target, 'background-color');
-    hexColor = rgb2hex(color);
-    textColor = getContrastYIQ(hexColor.substring(1));
+        color = getStyle(event.target, 'background-color'),
+        hexColor = rgb2hex(color),
+        textColor = getContrastYIQ(hexColor.substring(1));
+
+    if (event.target.tagName !== 'LI') return;
 
     text.innerHTML = name;
     hex.innerHTML = hexColor;
