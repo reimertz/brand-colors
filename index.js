@@ -1,70 +1,64 @@
 var companySquares = document.getElementById('companies').children,
-    isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
-                navigator.userAgent && !navigator.userAgent.match('CriOS'),
-    isIOS = navigator.userAgent && navigator.userAgent.indexOf('iPhone') > -1 ||
-            navigator.userAgent && navigator.userAgent.indexOf('iPad') > -1,
     text = document.getElementById('brand-name'),
     hex = document.getElementById('hex'),
-    hasClicked = false,
-    background = document.body,
-    textColor = 'black',
-    hexColor = '#FFF',
-    filter = document.getElementById('filter');
+    search = document.getElementById('search'),
+    body = document.body,
 
-  // Helper Functions
+    isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1
+              && navigator.userAgent && !navigator.userAgent.match('CriOS'),
 
-  function selectElementContents(el) {
-      var range = document.createRange();
-      range.selectNodeContents(el);
-      var sel = window.getSelection();
-      sel.removeAllRanges();
-      sel.addRange(range);
-  }
+    isIOS = navigator.userAgent && navigator.userAgent.indexOf('iPhone') > -1
+            ||navigator.userAgent && navigator.userAgent.indexOf('iPad') > -1,
 
-  function changeBackground(event) {
-    if (hasClicked) return;
+    sheet = (function() {
+      var style = document.createElement("style");
 
-      var name = event.currentTarget.innerHTML,
-        color = getStyle(event.currentTarget, "background-color");
-      hexColor = rgb2hex(color);
-      textColor = getContrastYIQ(hexColor.substring(1));
+      style.appendChild(document.createTextNode(''));
+      document.head.appendChild(style);
 
-      text.innerHTML = name;
-      hex.innerHTML = hexColor;
+      return style.sheet;
+    })();
 
-      background.style.color = textColor;
-      background.style.backgroundColor = color;
+
+  function selectElementContents(el) { //http://stackoverflow.com/a/6150060/3809029
+    var range, sel;
+
+    range = document.createRange();
+    range.selectNodeContents(el);
+
+    sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
   };
 
-  function selectColor(event){
-    if (hasClicked) {
-        event.currentTarget.classList.remove('clicked');
-        document.body.classList.remove('copy');
-        document.body.classList.remove('copied');
-        hasClicked = false;
 
-        return;
-      }
+  function rgb2hex(rgb) { //http://stackoverflow.com/a/3971432/3809029
+    rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
 
-      hasClicked = true;
-      event.currentTarget.classList.add('clicked');
-      document.body.classList.add('copy');
+    function hex(x) {
+        return ('0' + parseInt(x).toString(16)).slice(-2);
+    }
+
+    return '#' + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
   }
 
-  function resetState(){
-    if (hasClicked) return;
 
-    text.innerHTML = 'brand-colors';
-    hex.innerHTML = 'A collection available in sass, less, stylus and css.';
+  function getContrastYIQ(hexcolor){ //https://gist.github.com/StevenBlack/960189
+    var r, g, b, yiq;
 
-    background.style.color = 'black';
-    background.style.backgroundColor = 'rgba(255,255,255,0.9)';
+    r = parseInt(hexcolor.substr(0,2),16);
+    g = parseInt(hexcolor.substr(2,2),16);
+    b = parseInt(hexcolor.substr(4,2),16);
+    yiq = ((r*299)+(g*587)+(b*114))/1000;
+
+    return (yiq >= 128) ? 'black' : 'white';
   }
 
-  function getStyle(oElm, strCssRule){
+
+  function getStyle(oElm, strCssRule){ //http://stackoverflow.com/a/4172920/3809029
     var strValue = "";
     if(document.defaultView && document.defaultView.getComputedStyle){
-      strValue = document.defaultView.getComputedStyle(oElm, "").getPropertyValue(strCssRule);
+      strValue = document.defaultView.getComputedStyle(oElm, '').getPropertyValue(strCssRule);
     }
     else if(oElm.currentStyle){
       strCssRule = strCssRule.replace(/\-(\w)/g, function (strMatch, p1){
@@ -75,34 +69,53 @@ var companySquares = document.getElementById('companies').children,
     return strValue;
   }
 
-  function rgb2hex(rgb) {
-    rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
+  function updateState(event) {
+    var name = event.currentTarget.innerHTML,
 
-    function hex(x) {
-        return ("0" + parseInt(x).toString(16)).slice(-2);
+    color = getStyle(event.currentTarget, 'background-color');
+    hexColor = rgb2hex(color);
+    textColor = getContrastYIQ(hexColor.substring(1));
+
+    text.innerHTML = name;
+    hex.innerHTML = hexColor;
+
+    body.style.color = textColor;
+    body.style.backgroundColor = color;
+  };
+
+  function resetState(){
+    text.innerHTML = 'brand-colors';
+    hex.innerHTML = 'A collection available in sass, less, stylus and css.';
+
+    body.style.color = 'black';
+    body.style.backgroundColor = 'rgba(255,255,255,0.9)';
+  }
+
+  search.addEventListener('keyup', function(event){
+    var text = event.target.value.toLowerCase();
+    var search = 'li:not([class*="' + text + '"])';
+
+    if(text.length == 0 ) return;
+
+    for(var i = 0; i < sheet.rules.length; i++) {
+      sheet[(sheet.removeRule ? 'removeRule' : 'deleteRule')](0);
     }
 
-    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
-  }
+    sheet[(sheet.addRule ? 'addRule' : 'insertRule')]
+      (search, 'width:0 !important',  0);
+  });
 
-  function getContrastYIQ(hexcolor){
-    var r = parseInt(hexcolor.substr(0,2),16),
-        g = parseInt(hexcolor.substr(2,2),16),
-        b = parseInt(hexcolor.substr(4,2),16),
-        yiq = ((r*299)+(g*587)+(b*114))/1000;
 
-    return (yiq >= 128) ? 'black' : 'white';
-  }
+  // Initiate everything;
 
   document.getElementById('companies').addEventListener('mouseout', resetState);
 
-
   [].forEach.call(companySquares ,function(div) {
-      div.addEventListener('mouseover', changeBackground);
+      div.addEventListener('mouseover', updateState);
     }
   );
 
-    client = new Clipboard(companySquares, {
+  client = new Clipboard(companySquares, {
     text: function(trigger) {
       return document.getElementById('hex').innerHTML;
     }
@@ -135,26 +148,4 @@ var companySquares = document.getElementById('companies').children,
     requestAnimationFrame(function() {
       selectElementContents(hex);
     });
-  })
-
-  var sheet = (function() {
-    var style = document.createElement("style");
-    style.appendChild(document.createTextNode(""));
-
-    //sheet.addRule('body', 'color: inherit;',  0);
-    document.head.appendChild(style);
-    return style.sheet;
-  })();
-
-  filter.addEventListener('keyup', function(event){
-    var text = event.target.value.toLowerCase();
-    var filter = 'li:not([class*="' + text + '"])';
-
-    if (hasClicked) return;
-
-    for(var i = 0; i < sheet.rules.length; i++) {
-      sheet.removeRule(0);
-    }
-    if(text.length == 0 ) return;
-    sheet.addRule(filter, 'width:0 !important',  0);
   })

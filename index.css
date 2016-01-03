@@ -9,7 +9,7 @@ body {
 
 body.copy li[class^="bc-"]:not(.clicked),
 body.copy .intro,
-body.copy #filter {
+body.copy #search {
   opacity: 0.1;
   pointer-events: none;
 }
@@ -95,7 +95,7 @@ main > section {
 }
 
 
-input#filter {
+input#search {
   color: white;
   margin: 0;
   padding: 0;
@@ -112,8 +112,8 @@ input#filter {
   text-transform: uppercase;
   border-radius: 0;
 }
-input#filter:hover,
-input#filter:focus {
+input#search:hover,
+input#search:focus {
 
 }
 
