@@ -434,6 +434,7 @@ united-way
 unity
 university-of-arizona
 university-of-oregon
+university-of-kentucky
 univision
 ustream
 utorrent
