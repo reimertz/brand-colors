@@ -1,4 +1,4 @@
-var companySquares = document.getElementById('companies').children,
+var companyContainer = document.getElementById('companies'),
     text = document.getElementById('brand-name'),
     hex = document.getElementById('hex'),
     search = document.getElementById('search'),
@@ -70,9 +70,8 @@ var companySquares = document.getElementById('companies').children,
   }
 
   function updateState(event) {
-    var name = event.currentTarget.innerHTML,
-
-    color = getStyle(event.currentTarget, 'background-color');
+    var name = event.target.innerHTML,
+    color = getStyle(event.target, 'background-color');
     hexColor = rgb2hex(color);
     textColor = getContrastYIQ(hexColor.substring(1));
 
@@ -107,15 +106,11 @@ var companySquares = document.getElementById('companies').children,
 
 
   // Initiate everything;
+  companyContainer.addEventListener('mouseover', updateState);
+  companyContainer.addEventListener('mouseout', resetState);
 
-  document.getElementById('companies').addEventListener('mouseout', resetState);
-
-  [].forEach.call(companySquares ,function(div) {
-      div.addEventListener('mouseover', updateState);
-    }
-  );
-
-  client = new Clipboard(companySquares, {
+  //clipboard.js implement event delegation iternally
+  client = new Clipboard(companyContainer.children, {
     text: function(trigger) {
       return document.getElementById('hex').innerHTML;
     }
