@@ -775,7 +775,7 @@ var _brandColors = {
   'rss-2': '#f26522',
   'ruby': '#cc342d',
   'sainsburys': '#ec8a00',
-  'salesforce': '#1798c1',
+  'salesforce': '#1589ee',
   'salesforce-2': '#ff1100',
   'samsung': '#1428a0',
   'samsung-10': '#00a9e0',
