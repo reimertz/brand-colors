@@ -406,7 +406,6 @@ var _brandColors = {
   'google-3': '#f4b400',
   'google-4': '#db4437',
   'google-5': '#e7e6dd',
-  'google-plus': '#dc4e41',
   'googleplus': '#dc4e41',
   'gravatar': '#1e8cbe',
   'gravit': '#e30061',
