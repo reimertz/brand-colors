@@ -131,7 +131,7 @@ var companyContainer = document.getElementById('companies'),
 
   client.on('error', function(event){
     if(!isIOS){
-      hex.setAttribute('aria-label', 'Press ' + ((isSafari) ? '⌘' : 'CTRL') + '-S to copy');
+      hex.setAttribute('aria-label', 'Press ' + ((isSafari) ? '⌘' : 'CTRL') + '-C to copy');
       hex.classList.add('tooltipped');
       hex.classList.add('tooltipped-s');
 
