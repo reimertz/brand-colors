@@ -983,6 +983,7 @@ var _brandColors = {
   'university-of-arizona-2': '#003366',
   'university-of-oregon': '#fce122',
   'university-of-oregon-2': '#18453b',
+  'university-of-kentucky': '#005daa',
   'univision': '#c822b0',
   'ustream': '#3388ff',
   'utorrent': '#00853f',
