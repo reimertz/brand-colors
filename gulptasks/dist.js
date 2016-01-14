@@ -73,7 +73,5 @@ gulp.task('render-css', function () {
     .pipe(gulp.dest('dist/'+ version + '/css/'))
     .pipe(g.rename('brand-colors.latest.min.css'))
     .pipe(gulp.dest('dist/latest/css/'));
-    
-
 });
 

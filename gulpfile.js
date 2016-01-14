@@ -11,4 +11,9 @@ requireDir('./gulptasks');
 gulp.task('help', g.taskListing);
 gulp.task('dist', ['styles-dist']);
 
+gulp.task('deploy', ['dev-build'] ,function() {
+  return gulp.src('./tmp/**/*')
+    .pipe(g.ghPages());
+});
 
+gulp.task('dev', ['live-server']);

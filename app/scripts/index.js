@@ -1,6 +1,8 @@
 var companyContainer = document.getElementById('companies'),
     text = document.getElementById('brand-name'),
+    initialText = text.innerHTML,
     hex = document.getElementById('hex'),
+    initialHex = hex.innerHTML,
     search = document.getElementById('search'),
     body = document.body,
 
@@ -85,8 +87,8 @@ var companyContainer = document.getElementById('companies'),
   };
 
   function resetState(){
-    text.innerHTML = 'brand-colors';
-    hex.innerHTML = 'A collection available in sass, less, stylus and css.';
+    text.innerHTML = initialText;
+    hex.innerHTML = initialHex;
 
     body.style.color = 'black';
     body.style.backgroundColor = 'rgba(255,255,255,0.9)';

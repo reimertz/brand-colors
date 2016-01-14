@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title brand-colors
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0')
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:creator', content='@reimertz')
+    meta(name='twitter:site', content='@reimertz')
+    meta(name='twitter:title', content='brand-colors')
+    meta(name='twitter:description', content='A +#{ Math.floor(companies.length/100)*100} color collection available in sass, less, stylus and css. Made by @reimertz')
+    meta(name='twitter:image', content='https://pbs.twimg.com/media/CX8akHLWQAA4nC_.png:large')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', type='text/css', href='dist/latest/css/brand-colors.latest.css')
+    link(rel='stylesheet', type='text/css', href='styles.css')
+  body.no-interaction
+    nav
+      header
+        h1#brand-name brand-colors
+        p#hex(contenteditable='')
+          | A #{ Math.floor(companies.length/100)*100}+ color collection available in sass, less, stylus and css
+          span#cpy
+      section.intro
+        p
+          a(href='//github.com/reimertz/brand-colors') documentation
+          span.square &#x25A0;
+          a(href='//twitter.com/reimertz') made by @reimertz
+        p
+          - var s = 'brand-colors - a ' + Math.floor(companies.length/100)*100 + '+ color collection available in sass, less, stylus and css. by @reimertz';
+          - var encodedString = encodeURIComponent(s);
+
+          a(class="twitter-share-button" href="https://twitter.com/intent/tweet?text=#{encodedString}") Tweet
+          iframe(src='https://ghbtns.com/github-btn.html?user=reimertz&repo=brand-colors&type=star&count=true', frameborder='0', scrolling='0', width='90px', height='20px')
+          iframe(src='https://ghbtns.com/github-btn.html?user=reimertz&repo=brand-colors&type=fork&count=true', frameborder='0', scrolling='0', width='90px', height='20px')
+    main
+      section
+        input#search(placeholder='search')
+        ol#companies
+          each company in companies
+            li(class="bc-#{company.name}-bg")=company.name
+
+    script(src='https://cdn.jsdelivr.net/clipboard.js/1.5.5/clipboard.min.js')
+    script(src='index.js')
+    script.
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

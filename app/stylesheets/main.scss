@@ -1,0 +1,200 @@
+@import 'components/tooltips';
+
+body {
+  background: rgba(255,255,255,0.9);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  transition: background-color 200ms;
+  position: relative;
+}
+
+body.copy li[class^="bc-"]:not(.clicked),
+body.copy .intro,
+body.copy #search {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+body.copy #cpy {
+  opacity: 1;
+}
+body.copy #brand-name {
+  font-size: 50px;
+}
+
+body.copy #hex {
+  font-size: 20px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+  z-index: 1;
+  height: 200px;
+  background-color: inherit;
+  z-index: 2;
+}
+
+#brand-name {
+  transition: 200ms;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 25px;
+  text-align: center;
+}
+
+#hex {
+  outline: none;
+}
+
+#hex::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: black;
+  padding: 2px 10px;
+}
+
+#hex::selection {
+  color: white;
+  background: black;
+  padding: 2px 10px;
+}
+
+#intro {
+  transition: 200ms;
+}
+
+.square {
+  font-family:initial;
+}
+
+main {
+  margin-top: 250px;
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+  width: 810px;
+  text-align: left;
+}
+
+main > section {
+  text-align: left;
+}
+
+::-webkit-input-placeholder {
+   color: inherit;
+}
+
+input#search {
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 35px;
+  border: none;
+  background: tomato;
+  width: 132px;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  padding-left: 8px;
+  outline: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+input#search:hover,
+input#search:focus {
+
+}
+
+ol#companies {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  padding: 0;
+  font-size: 0px;
+  line-height: 0px;
+}
+ol li:first-child {
+  margin-left: 140px;
+}
+
+li[class^="bc-"] {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0px;
+  height:35px;
+  margin: 0 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 35px;
+  transition: width 350ms;
+}
+
+li[class^="bc-"]:hover {
+
+}
+
+li[class^="bc-"].selected {
+  background-color: white;
+}
+
+body:not(.copy) ol#companies:hover:after {
+  width: 0%;
+  font-size: 0;
+}
+
+@media (max-width: 850px) {
+  #brand-name {
+    font-size: 28px;
+  }
+
+  body.copy #brand-name {
+   font-size: 30px;
+  }
+
+  .text {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  #hex {
+    font-size: 12px;
+  }
+
+  body.copy #hex {
+   font-size: 16px;
+  }
+
+  main {
+    width: 90%;
+    text-align: left;
+  }
+
+  main > section {
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  ol#companies {
+    width: 315px;
+  }
+}

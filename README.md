@@ -57,6 +57,15 @@ bower install brand-colors
 </body>
 ```
 
+###Run brand-colors.com locally
+If you want to work on the static homepage, just run the following commands
+and you will get a live-reloading server listening for changes in /app
+and brandColors.js
+```bash
+npm install
+gulp dev
+```
+
 ###List of Companies
 
 4ormat
