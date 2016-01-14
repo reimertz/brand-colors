@@ -1,5 +1,5 @@
 /* 
-* @preserve brand-colors 1.0.1
+* @preserve brand-colors 1.1.0
 * http://reimertz.github.io/brand-colors
 * (c) 2014 Pierre Reimertz
 * may be freely distributed under the MIT license.
@@ -679,23 +679,16 @@
 }
 
 .bc-bing-2 {
-  color: #ffb900;
-}
-.bc-bing-2-bg {
-  background-color: #ffb900;
-}
-
-.bc-bing-2-2 {
   color: #505050;
 }
-.bc-bing-2-2-bg {
+.bc-bing-2-bg {
   background-color: #505050;
 }
 
-.bc-bing-2-3 {
+.bc-bing-3 {
   color: #a3a3a3;
 }
-.bc-bing-2-3-bg {
+.bc-bing-3-bg {
   background-color: #a3a3a3;
 }
 
@@ -2797,13 +2790,6 @@
 }
 .bc-google-5-bg {
   background-color: #e7e6dd;
-}
-
-.bc-google-plus {
-  color: #dc4e41;
-}
-.bc-google-plus-bg {
-  background-color: #dc4e41;
 }
 
 .bc-googleplus {
@@ -6005,10 +5991,10 @@
   background-color: #eb4924;
 }
 
-.bc-subway-1 {
+.bc-subway {
   color: #00543d;
 }
-.bc-subway-1-bg {
+.bc-subway-bg {
   background-color: #00543d;
 }
 
@@ -6845,6 +6831,13 @@
   background-color: #18453b;
 }
 
+.bc-university-of-kentucky {
+  color: #005daa;
+}
+.bc-university-of-kentucky-bg {
+  background-color: #005daa;
+}
+
 .bc-univision {
   color: #c822b0;
 }
@@ -7493,13 +7486,6 @@
   color: #e9eff3;
 }
 .bc-wordpress-com-7-bg {
-  background-color: #e9eff3;
-}
-
-.bc-wordpress-com-8 {
-  color: #e9eff3;
-}
-.bc-wordpress-com-8-bg {
   background-color: #e9eff3;
 }
 

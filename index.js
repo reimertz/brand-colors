@@ -1,6 +1,8 @@
 var companyContainer = document.getElementById('companies'),
     text = document.getElementById('brand-name'),
+    initialText = text.innerHTML,
     hex = document.getElementById('hex'),
+    initialHex = hex.innerHTML,
     search = document.getElementById('search'),
     body = document.body,
 
@@ -85,8 +87,8 @@ var companyContainer = document.getElementById('companies'),
   };
 
   function resetState(){
-    text.innerHTML = 'brand-colors';
-    hex.innerHTML = 'A collection available in sass, less, stylus and css.';
+    text.innerHTML = initialText;
+    hex.innerHTML = initialHex;
 
     body.style.color = 'black';
     body.style.backgroundColor = 'rgba(255,255,255,0.9)';
@@ -131,7 +133,7 @@ var companyContainer = document.getElementById('companies'),
 
   client.on('error', function(event){
     if(!isIOS){
-      hex.setAttribute('aria-label', 'Press ' + ((isSafari) ? '⌘' : 'CTRL') + '-S to copy');
+      hex.setAttribute('aria-label', 'Press ' + ((isSafari) ? '⌘' : 'CTRL') + '-C to copy');
       hex.classList.add('tooltipped');
       hex.classList.add('tooltipped-s');
 
