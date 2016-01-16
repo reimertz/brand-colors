@@ -17,6 +17,11 @@ function getTemplateData() {
   };
 }
 
+gulp.task('dev-extras', function () {
+  return gulp.src(['./app/CNAME', './app/favicon.ico'])
+    .pipe(gulp.dest('.tmp/'))
+});
+
 gulp.task('dev-brand-colors-css', function () {
   return gulp.src(['templates/brand-colors.css'])
     .on('error', g.notify.onError('<%= error.message%>'))
@@ -48,7 +53,7 @@ gulp.task('dev-js', function () {
     .pipe(gulp.dest('.tmp/'));
 });
 
-gulp.task('dev-build', ['dev-brand-colors-css','dev-scss','dev-jade','dev-js'])
+gulp.task('dev-build', ['dev-brand-colors-css','dev-scss','dev-jade','dev-js', 'dev-extras'])
 
 gulp.task('live-server', ['dev-build'], function(){
   var server = g.liveServer.static(['.tmp/'], 3000);
