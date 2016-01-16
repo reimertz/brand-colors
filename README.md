@@ -3,6 +3,8 @@
 A collection of 400+ brand colors.
 works flawlessly with scss, less, sass, stylus and css.
 
+![](brand-colors.png)
+
 ###Installation
 
 ```
