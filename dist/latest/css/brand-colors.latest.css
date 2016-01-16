@@ -1,5 +1,5 @@
 /* 
-* @preserve brand-colors 1.1.0
+* @preserve brand-colors 1.1.1
 * http://reimertz.github.io/brand-colors
 * (c) 2014 Pierre Reimertz
 * may be freely distributed under the MIT license.
@@ -2897,6 +2897,13 @@
   background-color: #0093d0;
 }
 
+.bc-here {
+  color: #124191;
+}
+.bc-here-bg {
+  background-color: #124191;
+}
+
 .bc-heroku {
   color: #c9c3e6;
 }
@@ -3476,6 +3483,48 @@
 }
 .bc-kodery-bg {
   background-color: #00af81;
+}
+
+.bc-labs64-1 {
+  color: #E14817;
+}
+.bc-labs64-1-bg {
+  background-color: #E14817;
+}
+
+.bc-labs64-2 {
+  color: #F08B53;
+}
+.bc-labs64-2-bg {
+  background-color: #F08B53;
+}
+
+.bc-labs64-3 {
+  color: #7B2A10;
+}
+.bc-labs64-3-bg {
+  background-color: #7B2A10;
+}
+
+.bc-labs64-4 {
+  color: #AB6543;
+}
+.bc-labs64-4-bg {
+  background-color: #AB6543;
+}
+
+.bc-labs64-5 {
+  color: #F2951C;
+}
+.bc-labs64-5-bg {
+  background-color: #F2951C;
+}
+
+.bc-labs64-6 {
+  color: #87888A;
+}
+.bc-labs64-6-bg {
+  background-color: #87888A;
 }
 
 .bc-laravel {
@@ -4260,6 +4309,48 @@
 }
 .bc-netflix-3-bg {
   background-color: #f5f5f1;
+}
+
+.bc-netlicensing-1 {
+  color: #E14817;
+}
+.bc-netlicensing-1-bg {
+  background-color: #E14817;
+}
+
+.bc-netlicensing-2 {
+  color: #F08B53;
+}
+.bc-netlicensing-2-bg {
+  background-color: #F08B53;
+}
+
+.bc-netlicensing-3 {
+  color: #7B2A10;
+}
+.bc-netlicensing-3-bg {
+  background-color: #7B2A10;
+}
+
+.bc-netlicensing-4 {
+  color: #AB6543;
+}
+.bc-netlicensing-4-bg {
+  background-color: #AB6543;
+}
+
+.bc-netlicensing-5 {
+  color: #F2951C;
+}
+.bc-netlicensing-5-bg {
+  background-color: #F2951C;
+}
+
+.bc-netlicensing-6 {
+  color: #87888A;
+}
+.bc-netlicensing-6-bg {
+  background-color: #87888A;
 }
 
 .bc-netvibes {
@@ -5369,10 +5460,10 @@
 }
 
 .bc-salesforce {
-  color: #1798c1;
+  color: #1589ee;
 }
 .bc-salesforce-bg {
-  background-color: #1798c1;
+  background-color: #1589ee;
 }
 
 .bc-salesforce-2 {
