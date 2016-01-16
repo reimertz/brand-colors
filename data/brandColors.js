@@ -420,6 +420,7 @@ var _brandColors = {
   'heineken-2': '#ff2b00',
   'heineken-3': '#999999',
   'hellowallet': '#0093d0',
+  'here': '#124191',
   'heroku': '#c9c3e6',
   'heroku-2': '#6762a6',
   'hi5': '#fd9827',
