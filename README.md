@@ -262,6 +262,7 @@ kitkat
 kiwipay
 klm
 kodery
+labs64
 laravel
 lastfm
 line
@@ -297,6 +298,7 @@ nbc
 nc-state-university
 nest
 netflix
+netlicensing
 netvibes
 new-balance
 new-york-post
