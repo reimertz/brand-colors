@@ -33,6 +33,13 @@ html
           iframe(src='https://ghbtns.com/github-btn.html?user=reimertz&repo=brand-colors&type=fork&count=true', frameborder='0', scrolling='0', width='90px', height='20px')
     main
       section
+        form(action="https://hook.io/reimertz/brand-colors/" method="post")
+          input#brandname(name="brandName" placeholder='brand')
+          input#brandcolor(name="brandColor" placeholder='hex value')
+          input#brandsource(name="brandSource" placeholder='Source (optional)')
+          input#message(name="message" placeholder='(optional)')
+          button#send(value="send" type="submit" name="submit") Submit
+        div#add +
         input#search(placeholder='search')
         ol#companies
           each company in companies

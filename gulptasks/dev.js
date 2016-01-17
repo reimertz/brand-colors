@@ -59,7 +59,7 @@ gulp.task('live-server', ['dev-build'], function(){
   var server = g.liveServer.static(['.tmp/'], 3000);
   server.start();
   gulp.watch('./data/brandColors.js', ['dev-brand-colors-css', 'dev-jade']);
-  gulp.watch('./app/stylesheets/*.scss', ['dev-css']);
+  gulp.watch('./app/stylesheets/*.scss', ['dev-scss']);
   gulp.watch('./app/scripts/*.js', ['dev-js']);
   gulp.watch('./app/*.jade', ['dev-jade']);
 

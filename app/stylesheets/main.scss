@@ -100,7 +100,26 @@ main > section {
    color: inherit;
 }
 
+#add {
+  cursor: pointer;
+  display: inline-block;
+  background: lightgreen;
+  position: absolute;
+  outline: none;
+  border: none;
+  border-radius: none;
+  color: white;
+  height: 35px;
+  width: 35px;
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
 input#search {
+  left: 35px;
   color: white;
   margin: 0;
   padding: 0;
@@ -122,6 +141,24 @@ input#search:focus {
 
 }
 
+form input {
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 35px;
+  border: none;
+  background: tomato;
+  width: 132px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding-left: 8px;
+  outline: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
 ol#companies {
   position: relative;
   display: inline-block;
@@ -131,7 +168,7 @@ ol#companies {
   line-height: 0px;
 }
 ol li:first-child {
-  margin-left: 140px;
+  margin-left: 175px;
 }
 
 li[class^="bc-"] {
