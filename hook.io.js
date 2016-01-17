@@ -19,7 +19,8 @@ module['exports'] = function echoHttp (hook) {
   });
 
   store.get('authKey', function(err, token){
-      if (err) { return res.status(500).json({error:'missing internal auth keys'});
+      if (err) return res.status(500).json({error:'missing internal auth keys'});
+
       github.authenticate({
         type: "oauth",
         token: token
@@ -45,7 +46,7 @@ module['exports'] = function echoHttp (hook) {
       github.issues.create({
         user  : 'reimertz',
         repo  : 'brand-colors',
-        title   : 'Ms. Bot: Add ' + hook.params.brandName + " : " + hook.params.brandColor,
+        title   : 'BOT: Add ' + hook.params.brandName + " : " + hook.params.brandColor,
         body  : body
       }, function(err, result){
         if (err) return res.status(500).json({error:'github messed up'});
