@@ -200,6 +200,7 @@ nav {
   text-align: center; }
 
 #hex {
+  transition: 200ms;
   outline: none; }
 
 #hex::-moz-selection {
@@ -213,7 +214,7 @@ nav {
   background: black;
   padding: 2px 10px; }
 
-#intro {
+.intro {
   transition: 200ms; }
 
 .square {
