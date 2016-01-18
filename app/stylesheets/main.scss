@@ -60,6 +60,7 @@ nav {
 }
 
 #hex {
+  transition: 200ms;
   outline: none;
 }
 
@@ -75,7 +76,7 @@ nav {
   padding: 2px 10px;
 }
 
-#intro {
+.intro {
   transition: 200ms;
 }
 
