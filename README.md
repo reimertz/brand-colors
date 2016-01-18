@@ -59,10 +59,9 @@ and brandColors.js
 npm install
 gulp dev
 ```
-##[Full list of colors](https://github.com/reimertz/brand-colors/blob/master/data/brandColors.js#L8)
-
-##Thanks to
-brandcolors.net
+###Brands 
+[Full list of colors](https://github.com/reimertz/brand-colors/blob/master/data/brandColors.js#L8)
+A lot fo the colors comes from brandcolors.net, so a huge shout out to @galengidman.
 
 ---
 > [reimertz.co](http://reimertz.co) &nbsp;&middot;&nbsp;
