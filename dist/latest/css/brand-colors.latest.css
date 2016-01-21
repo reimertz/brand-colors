@@ -1,5 +1,5 @@
 /* 
-* @preserve brand-colors 1.1.1
+* @preserve brand-colors 1.1.2
 * http://reimertz.github.io/brand-colors
 * (c) 2014 Pierre Reimertz
 * may be freely distributed under the MIT license.
@@ -622,11 +622,25 @@
   background-color: #629aa9;
 }
 
+.bc-bandpage {
+  color: #629aa9;
+}
+.bc-bandpage-bg {
+  background-color: #629aa9;
+}
+
+.bc-bandpage-2 {
+  color:  #2c3235;
+}
+.bc-bandpage-2-bg {
+  background-color:  #2c3235;
+}
+
 .bc-barnes-noble {
-  color: #2a5934;
+  color: #3eabff;
 }
 .bc-barnes-noble-bg {
-  background-color: #2a5934;
+  background-color: #3eabff;
 }
 
 .bc-bebo {
