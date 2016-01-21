@@ -94,8 +94,7 @@ var companyContainer = document.getElementById('companies'),
     body.style.backgroundColor = 'rgba(255,255,255,0.9)';
   }
 
-  search.addEventListener('keyup', function(event){
-    var text = event.target.value.toLowerCase();
+  function setSearchCss(text){
     var search = 'li:not([class*="' + text + '"])';
 
     for(var i = 0; i < sheet.rules.length; i++) {
@@ -106,12 +105,25 @@ var companyContainer = document.getElementById('companies'),
 
     sheet[(sheet.addRule ? 'addRule' : 'insertRule')]
       (search, 'width:0 !important',  0);
+  }
+
+  search.addEventListener('keyup', function(event){
+    var text = event.target.value.toLowerCase();
+    setSearchCss(text);
   });
 
+  function checkIfSearchQuery(){
+    var query = document.location.search.split('?search=');
+    if(query.length == 2){
+      setSearchCss(query[1]);
+      search.value = query[1];
+    }
+  }
 
   // Initiate everything;
   companyContainer.addEventListener('mouseover', updateState);
   companyContainer.addEventListener('mouseout', resetState);
+  checkIfSearchQuery();
 
   //clipboard.js implement event delegation iternally
   client = new Clipboard(companyContainer.children, {
@@ -148,3 +160,4 @@ var companyContainer = document.getElementById('companies'),
       selectElementContents(hex);
     });
   })
+
