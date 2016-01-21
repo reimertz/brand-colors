@@ -46,7 +46,7 @@ bower install brand-colors
 
 ```html
   <link rel="stylesheet" href="bower_components/brand-colors/dist/latest/css/brand-colors.latest.min.css">`
-  
+
   <span class="bc-spotify">This text is spotify-green</span>
   <div class="bc-spotify-bg">This div has a spotify-green background</div>
 ```
@@ -59,7 +59,7 @@ and brandColors.js
 npm install
 gulp dev
 ```
-###Brands 
+###Brands
 [Full list of colors](https://github.com/reimertz/brand-colors/blob/master/data/brandColors.js#L8)
 A lot fo the colors comes from brandcolors.net, so a huge shout out to @galengidman.
 

@@ -94,6 +94,8 @@ var _brandColors = {
   'baidu': '#de0f17',
   'baidu-2': '#2529d8',
   'bandcamp': '#629aa9',
+  'bandpage': '#3eabff',
+  'bandpage-2': ' #2c3235',
   'barnes-noble': '#2a5934',
   'bebo': '#e04646',
   'behance': '#1769ff',
