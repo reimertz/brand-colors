@@ -287,7 +287,7 @@ var _brandColors = {
   'drupal-3': '#00598e',
   'dunked': '#2da9d7',
   'dunked-2': '#212a3e',
-  'dunked-2': '#3fc380',
+  'dunked-3': '#3fc380',
   'easy-jet': '#ff6600',
   'easy-jet-2': '#000000',
   'easy-jet-3': '#58595b',
@@ -416,6 +416,8 @@ var _brandColors = {
   'groupon': '#82b548',
   'grunt': '#fba919',
   'grunt-2': '#463014',
+  'gulp': '#CF4646',
+  'gulp-2':'#FFFFFF'
   'hacker-news': '#ff6600',
   'happn': '#0087b4',
   'heineken': '#00a100',
