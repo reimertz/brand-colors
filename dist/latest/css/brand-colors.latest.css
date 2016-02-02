@@ -1,5 +1,5 @@
 /* 
-* @preserve brand-colors 1.1.2
+* @preserve brand-colors 1.2.0
 * http://reimertz.github.io/brand-colors
 * (c) 2014 Pierre Reimertz
 * may be freely distributed under the MIT license.
@@ -1406,6 +1406,13 @@
   background-color: #606061;
 }
 
+.bc-debian {
+  color: #A80030;
+}
+.bc-debian-bg {
+  background-color: #A80030;
+}
+
 .bc-delectable {
   color: #334858;
 }
@@ -1967,9 +1974,16 @@
 }
 
 .bc-dunked-2 {
-  color: #3fc380;
+  color: #212a3e;
 }
 .bc-dunked-2-bg {
+  background-color: #212a3e;
+}
+
+.bc-dunked-3 {
+  color: #3fc380;
+}
+.bc-dunked-3-bg {
   background-color: #3fc380;
 }
 
@@ -2328,6 +2342,41 @@
 }
 .bc-feedly-bg {
   background-color: #2bb24c;
+}
+
+.bc-fedora {
+  color: #294172;
+}
+.bc-fedora-bg {
+  background-color: #294172;
+}
+
+.bc-fedora-2 {
+  color: #325191;
+}
+.bc-fedora-2-bg {
+  background-color: #325191;
+}
+
+.bc-fedora-3 {
+  color: #3C6EB4;
+}
+.bc-fedora-3-bg {
+  background-color: #3C6EB4;
+}
+
+.bc-fedora-4 {
+  color: #81DC3E;
+}
+.bc-fedora-4-bg {
+  background-color: #81DC3E;
+}
+
+.bc-fedora-5 {
+  color: #9970B5;
+}
+.bc-fedora-5-bg {
+  background-color: #9970B5;
 }
 
 .bc-fiat {
@@ -2867,6 +2916,20 @@
 }
 .bc-grunt-2-bg {
   background-color: #463014;
+}
+
+.bc-gulp {
+  color: #CF4646;
+}
+.bc-gulp-bg {
+  background-color: #CF4646;
+}
+
+.bc-gulp-2 {
+  color: #FFFFFF;
+}
+.bc-gulp-2-bg {
+  background-color: #FFFFFF;
 }
 
 .bc-hacker-news {
@@ -4057,6 +4120,13 @@
 }
 .bc-mcdonalds-8-bg {
   background-color: #865200;
+}
+
+.bc-medium {
+  color: #2FB88B;
+}
+.bc-medium-bg {
+  background-color: #2FB88B;
 }
 
 .bc-meetup {
@@ -5585,6 +5655,13 @@
   background-color: #999999;
 }
 
+.bc-scratch {
+  color: #25AFF4;
+}
+.bc-scratch-bg {
+  background-color: #25AFF4;
+}
+
 .bc-scribd {
   color: #1a7bba;
 }
@@ -6178,6 +6255,20 @@
 }
 .bc-t-mobile-bg {
   background-color: #e20074;
+}
+
+.bc-tableless {
+  color: #D71E24;
+}
+.bc-tableless-bg {
+  background-color: #D71E24;
+}
+
+.bc-tableless-2 {
+  color: #303030;
+}
+.bc-tableless-2-bg {
+  background-color: #303030;
 }
 
 .bc-tagstr {
