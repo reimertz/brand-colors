@@ -423,7 +423,7 @@ var _brandColors = {
   'grunt': '#fba919',
   'grunt-2': '#463014',
   'gulp': '#CF4646',
-  'gulp-2':'#FFFFFF'
+  'gulp-2':'#FFFFFF',
   'hacker-news': '#ff6600',
   'happn': '#0087b4',
   'heineken': '#00a100',
