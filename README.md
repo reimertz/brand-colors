@@ -50,6 +50,21 @@ bower install brand-colors
   <span class="bc-spotify">This text is spotify-green</span>
   <div class="bc-spotify-bg">This div has a spotify-green background</div>
 ```
+####postcss
+
+Use [postcss-brand-color](https://github.com/postcss/postcss-brand-colors) plugin. Add it to PostCSS:
+
+```js
+postcss([ require('postcss-brand-colors') ])
+```
+
+and use `*-color` names:
+
+```css
+.a-div {
+  color: spotify-color;
+}
+```
 
 ###Run brand-colors.com locally
 If you want to work on the static homepage, just run the following commands
