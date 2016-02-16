@@ -1158,19 +1158,35 @@ var _brandColors = {
   'zopim': '#ff9d3b'
 };
 
-var brandColors = Object.keys(_brandColors).map(function(key){
-  return {name: key, color: _brandColors[key]}
+var _groupedColors = [];
+
+var brandColors = Object.keys(_brandColors).map(function(key) {
+  var formatted = key.replace(/-([0-9]+)/g, '');
+  
+  if (typeof _groupedColors[formatted] == "undefined")
+    _groupedColors[formatted] = [];
+  _groupedColors[formatted].push(_brandColors[key]);
+
+  return {
+    name: key,
+    color: _brandColors[key]
+  }
 });
 
 function getAll() {
   return brandColors;
 }
 
+function getByGroup() {
+  return _groupedColors;
+}
+
 function find(name) {
-  return brandColors.filter(function(brand){
+  return brandColors.filter(function(brand) {
     return brand.name === name;
   });
 }
 
 exports.getAll = getAll;
+exports.getByGroup = getByGroup;
 exports.find = find;
