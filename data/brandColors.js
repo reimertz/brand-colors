@@ -814,7 +814,7 @@ var _brandColors = {
   'sap': '#003366',
   'sap-2': '#999999',
   'scratch': '#F7A83A',
-  'scratch': '#25AFF4',
+  'scratch-1': '#25AFF4',
   'scribd': '#1a7bba',
   'shazam': '#0088ff',
   'shazam-10': '#949494',
@@ -1089,7 +1089,7 @@ var _brandColors = {
   'wordpress-2': '#d54e21',
   'wordpress-3': '#464646',
   'wordpress-com': '#0087be',
-  'wordpress-com': '#1e8cbe',
+  'wordpress-com-1': '#1e8cbe',
   'wordpress-com-10': '#668eaa',
   'wordpress-com-11': '#4f748e',
   'wordpress-com-12': '#3d596d',
@@ -1158,11 +1158,11 @@ var _brandColors = {
   'zopim': '#ff9d3b'
 };
 
-var _groupedColors = [];
+var _groupedColors = {};
 
 var brandColors = Object.keys(_brandColors).map(function(key) {
   var formatted = key.replace(/-([0-9]+)/g, '');
-  
+
   if (typeof _groupedColors[formatted] == "undefined")
     _groupedColors[formatted] = [];
   _groupedColors[formatted].push(_brandColors[key]);
