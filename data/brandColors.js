@@ -1177,8 +1177,16 @@ function getAll() {
   return brandColors;
 }
 
-function getByGroup() {
-  return _groupedColors;
+function getByGroup(brandName) {
+  if(!brandName) return _groupedColors;
+  else if(typeof brandName=='object'){
+    var collection={};
+    for(var i=0;i<brandName.length;i++){
+      collection[brandName[i]]=getByGroup(brandName[i]); 
+    }
+    return collection;
+  }
+  return _groupedColors[brandName];
 }
 
 function find(name) {
