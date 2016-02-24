@@ -1078,7 +1078,7 @@ var _brandColors = {
   'western-digital-4': '#0067b3',
   'western-digital-5': '#9d0a0e',
   'western-digital-6': '#003369',
-  'whatsapp': '#43d854',
+  'whatsapp': '#25d366',
   'whoosnap-designer': '#2fa5d6',
   'whoosnap-designer-2': '#b52f2c',
   'windows': '#00bcf2',
