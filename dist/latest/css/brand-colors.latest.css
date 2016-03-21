@@ -1,5 +1,5 @@
 /* 
-* @preserve brand-colors 1.2.0
+* @preserve brand-colors 1.2.1
 * http://reimertz.github.io/brand-colors
 * (c) 2014 Pierre Reimertz
 * may be freely distributed under the MIT license.
@@ -207,6 +207,13 @@
 }
 .bc-alcon-4-bg {
   background-color: #49a942;
+}
+
+.bc-alibaba {
+  color: #F47937;
+}
+.bc-alibaba-bg {
+  background-color: #F47937;
 }
 
 .bc-alienware {
@@ -5263,6 +5270,34 @@
   background-color: #e0001b;
 }
 
+.bc-qq {
+  color: #000000;
+}
+.bc-qq-bg {
+  background-color: #000000;
+}
+
+.bc-qq-2 {
+  color: #FFA600;
+}
+.bc-qq-2-bg {
+  background-color: #FFA600;
+}
+
+.bc-qq-3 {
+  color: #FB0009;
+}
+.bc-qq-3-bg {
+  background-color: #FB0009;
+}
+
+.bc-qq-4 {
+  color: #FFFFFF;
+}
+.bc-qq-4-bg {
+  background-color: #FFFFFF;
+}
+
 .bc-quizup {
   color: #ff5454;
 }
@@ -5809,6 +5844,20 @@
   background-color: #666666;
 }
 
+.bc-sina {
+  color: #e71d34;
+}
+.bc-sina-bg {
+  background-color: #e71d34;
+}
+
+.bc-sina-2 {
+  color: #232021;
+}
+.bc-sina-2-bg {
+  background-color: #232021;
+}
+
 .bc-skype {
   color: #00aff0;
 }
@@ -6255,6 +6304,13 @@
 }
 .bc-t-mobile-bg {
   background-color: #e20074;
+}
+
+.bc-taobao {
+  color: #FF4200;
+}
+.bc-taobao-bg {
+  background-color: #FF4200;
 }
 
 .bc-tableless {
@@ -7504,10 +7560,10 @@
 }
 
 .bc-whatsapp {
-  color: #43d854;
+  color: #25d366;
 }
 .bc-whatsapp-bg {
-  background-color: #43d854;
+  background-color: #25d366;
 }
 
 .bc-whoosnap-designer {
