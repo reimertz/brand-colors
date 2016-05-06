@@ -852,6 +852,7 @@ var _brandColors = {
   'smashing-magazine': '#e53b2c',
   'smashing-magazine-2': '#41b7d8',
   'snagajob': '#f47a20',
+  'snapchat': '#fffc00',
   'socialbro': '#29c4d0',
   'socialbro-2': '#f29556',
   'socialbro-3': '#84afa2',
