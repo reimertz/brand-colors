@@ -765,6 +765,7 @@ var _brandColors = {
   'quizup': '#ff5454',
   'quora': '#a82400',
   'quote-fm': '#66ceff',
+  'rambler': '#315efb',
   'razer': '#00ff00',
   'rdio': '#007dc3',
   'react': '#00d8ff',
