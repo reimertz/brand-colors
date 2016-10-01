@@ -803,7 +803,6 @@ var _brandColors = {
   'ruby': '#cc342d',
   'sainsburys': '#ec8a00',
   'salesforce': '#1589ee',
-  'salesforce-2': '#ff1100',
   'samsung': '#1428a0',
   'samsung-10': '#00a9e0',
   'samsung-11': '#009ca6',
