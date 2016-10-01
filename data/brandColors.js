@@ -177,6 +177,7 @@ var _brandColors = {
   'charity-water-2': '#2e9df7',
   'charity-water-3': '#231f20',
   'cheddar': '#ff7243',
+  'citymapper': '#37ab2e',
   'coca-cola': '#ed1c16',
   'code-school': '#616f67',
   'code-school-2': '#c68143',
