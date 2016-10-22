@@ -274,6 +274,7 @@ var _brandColors = {
   'dow-5': '#bf0d3e',
   'dow-6': '#910048',
   'dow-7': '#d0006f',
+  'dow-8': '#00a5db',
   'dribbble': '#444444',
   'dribbble-2': '#ea4c89',
   'dribbble-3': '#8aba56',
