@@ -1,5 +1,5 @@
 /* 
-* @preserve brand-colors 1.2.1
+* @preserve brand-colors 1.2.2
 * http://reimertz.github.io/brand-colors
 * (c) 2014 Pierre Reimertz
 * may be freely distributed under the MIT license.
@@ -1203,6 +1203,13 @@
   background-color: #ff7243;
 }
 
+.bc-citymapper {
+  color: #37ab2e;
+}
+.bc-citymapper-bg {
+  background-color: #37ab2e;
+}
+
 .bc-coca-cola {
   color: #ed1c16;
 }
@@ -1873,6 +1880,13 @@
 }
 .bc-dow-7-bg {
   background-color: #d0006f;
+}
+
+.bc-dow-8 {
+  color: #00a5db;
+}
+.bc-dow-8-bg {
+  background-color: #00a5db;
 }
 
 .bc-dribbble {
@@ -5319,6 +5333,13 @@
   background-color: #66ceff;
 }
 
+.bc-rambler {
+  color: #315efb;
+}
+.bc-rambler-bg {
+  background-color: #315efb;
+}
+
 .bc-razer {
   color: #00ff00;
 }
@@ -5585,13 +5606,6 @@
   background-color: #1589ee;
 }
 
-.bc-salesforce-2 {
-  color: #ff1100;
-}
-.bc-salesforce-2-bg {
-  background-color: #ff1100;
-}
-
 .bc-samsung {
   color: #1428a0;
 }
@@ -5691,9 +5705,16 @@
 }
 
 .bc-scratch {
-  color: #25AFF4;
+  color: #F7A83A;
 }
 .bc-scratch-bg {
+  background-color: #F7A83A;
+}
+
+.bc-scratch-1 {
+  color: #25AFF4;
+}
+.bc-scratch-1-bg {
   background-color: #25AFF4;
 }
 
@@ -5919,6 +5940,13 @@
 }
 .bc-snagajob-bg {
   background-color: #f47a20;
+}
+
+.bc-snapchat {
+  color: #fffc00;
+}
+.bc-snapchat-bg {
+  background-color: #fffc00;
 }
 
 .bc-socialbro {
@@ -7630,9 +7658,16 @@
 }
 
 .bc-wordpress-com {
-  color: #1e8cbe;
+  color: #0087be;
 }
 .bc-wordpress-com-bg {
+  background-color: #0087be;
+}
+
+.bc-wordpress-com-1 {
+  color: #1e8cbe;
+}
+.bc-wordpress-com-1-bg {
   background-color: #1e8cbe;
 }
 
