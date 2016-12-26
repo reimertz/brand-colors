@@ -16,7 +16,7 @@ bower install brand-colors
 @import 'bower_components/brand-colors/dist/latest/scss/brand-colors.latest.scss'
 
 .a-div {
-  color: $spotify;
+  color: $bc-spotify;
 }
 ```
 ####less
@@ -24,22 +24,44 @@ bower install brand-colors
 @import 'bower_components/brand-colors/dist/latest/less/brand-colors.latest.less'
 
 .a-div {
-  color: @spotify;
+  color: @bc-spotify;
 }
 ```
+##### in webpack
+  * use relative path to the `node_modules`, for example:
+  
+  ```js
+    app
+     |_node_modules
+     |_src
+        |_css
+           |_app.less
+  ```
+  in app.less:
+  
+  ```less
+  @import '../../node_modules/brand-colors/dist/latest/less/brand-colors.latest.less';
+  ```
+  
+  * use webpack's resolve mechanism
+  
+  ```less
+  @import '~brand-colors/dist/latest/less/brand-colors.latest.less';
+  ```
+  
 ####sass
 ```sass
 @import 'bower_components/brand-colors/dist/latest/scss/brand-colors.latest.sass'
 
 .a-div
-  color: $spotify
+  color: $bc-spotify
 ```
 ####stylus
 ```css
 @import 'bower_components/brand-colors/dist/latest/stylus/brand-colors.latest.styl'
 
 .a-div {
-  color: $spotify;
+  color: $bc-spotify;
 }
 ```
 ####css
