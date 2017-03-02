@@ -185,6 +185,7 @@ var _brandColors = {
   'codecademy-2': '#204056',
   'connexxion': '#d2ea32',
   'connexxion-2': '#016773',
+  'couchsurfing': '#d5490c',
   'courtyard': '#689550',
   'courtyard-2': '#85c446',
   'courtyard-3': '#c0de9e',
