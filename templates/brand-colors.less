@@ -5,4 +5,8 @@
 * may be freely distributed under the MIT license.
 */
 
-{% for company in companies %}@bc-{{company.name}}: {{company.color}};{% endfor %}
+{% for company in companies %}@bc-{{company.name}}: {{company.color}};
+{% endfor %}
+@brand-colors:
+{% for company in companies %}    bc-{{company.name}} {{company.color}},
+{% endfor %};
