@@ -2,16 +2,16 @@
 
 brand-colors is a collection of colors works available in sass, less, stylus and css
 
-##Installation
+## Installation
 
 ```
 npm install brand-colors
 bower install brand-colors
 ```
 
-##Usage
+## Usage
 
-####scss
+#### scss
 ```scss
 @import 'bower_components/brand-colors/dist/latest/scss/brand-colors.latest.scss'
 
@@ -19,7 +19,7 @@ bower install brand-colors
   color: $bc-spotify;
 }
 ```
-####less
+#### less
 ```css
 @import 'bower_components/brand-colors/dist/latest/less/brand-colors.latest.less'
 
@@ -49,14 +49,14 @@ bower install brand-colors
   @import '~brand-colors/dist/latest/less/brand-colors.latest.less';
   ```
   
-####sass
+#### sass
 ```sass
 @import 'bower_components/brand-colors/dist/latest/scss/brand-colors.latest.sass'
 
 .a-div
   color: $bc-spotify
 ```
-####stylus
+#### stylus
 ```css
 @import 'bower_components/brand-colors/dist/latest/stylus/brand-colors.latest.styl'
 
@@ -64,7 +64,7 @@ bower install brand-colors
   color: $bc-spotify;
 }
 ```
-####css
+#### css
 
 ```html
   <link rel="stylesheet" href="bower_components/brand-colors/dist/latest/css/brand-colors.latest.min.css">`
@@ -72,7 +72,7 @@ bower install brand-colors
   <span class="bc-spotify">This text is spotify-green</span>
   <div class="bc-spotify-bg">This div has a spotify-green background</div>
 ```
-####postcss
+#### postcss
 
 Use [postcss-brand-color](https://github.com/postcss/postcss-brand-colors) plugin. Add it to PostCSS:
 
@@ -88,7 +88,7 @@ and use `*-color` names:
 }
 ```
 
-###Run brand-colors.com locally
+### Run brand-colors.com locally
 If you want to work on the static homepage, just run the following commands
 and you will get a live-reloading server listening for changes in /app
 and brandColors.js
@@ -96,7 +96,7 @@ and brandColors.js
 npm install
 gulp dev
 ```
-###Brands
+### Brands
 [Full list of colors](https://github.com/reimertz/brand-colors/blob/master/data/brandColors.js#L8)
 A lot fo the colors comes from brandcolors.net, so a huge shout out to @galengidman.
 
