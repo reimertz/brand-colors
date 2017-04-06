@@ -431,6 +431,7 @@ var _brandColors = {
   'gulp-2':'#FFFFFF',
   'hacker-news': '#ff6600',
   'happn': '#0087b4',
+  'hatena-bookmark': '#00a4de',
   'heineken': '#00a100',
   'heineken-2': '#ff2b00',
   'heineken-3': '#999999',
