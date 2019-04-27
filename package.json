@@ -8,7 +8,11 @@
     "type": "git",
     "url": "git@github.com:reimertz/brand-colors.git"
   },
-  "keywords": ["branding", "brand colors", "colors"],
+  "keywords": [
+    "branding",
+    "brand colors",
+    "colors"
+  ],
   "author": "Piérre Reimertz",
   "license": "MIT",
   "devDependencies": {
