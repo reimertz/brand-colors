@@ -99,14 +99,22 @@ var companyContainer = document.getElementById('companies'),
   function setSearchCss(text){
     var search = 'li:not([class*="' + text + '"])';
 
-    for(var i = 0; i < sheet.rules.length; i++) {
+    //check whether .rules exists to support older browsers, and fallback to .cssRules as default.
+    var rulesLength = sheet.rules ? sheet.rules.length : sheet.cssRules.length;
+    for(var i = 0; i < rulesLength; i++) {
       sheet[(sheet.removeRule ? 'removeRule' : 'deleteRule')](0);
     }
 
     if(text.length == 0 ) return;
 
-    sheet[(sheet.addRule ? 'addRule' : 'insertRule')]
-      (search, 'width:0 !important',  0);
+    //function parameters differ for addRule() and insertRule()
+    //check for addRule to support older browsers, use insertRule as default
+    if(sheet.addRule){
+      sheet.addRule(search, 'width:0 !important',  0);
+    }
+    else {
+      sheet.insertRule(search + '{width:0 !important}',  0);
+    }
   }
 
   search.addEventListener('keyup', function(event){

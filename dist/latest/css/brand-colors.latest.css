@@ -1,5 +1,5 @@
 /*
-* @preserve brand-colors 2.0.0
+* @preserve brand-colors 2.1.0
 * http://reimertz.github.io/brand-colors
 * (c) 2017 Pierre Reimertz
 * may be freely distributed under the MIT license.
@@ -548,6 +548,8 @@
 .bc-codepen-5-bg { background-color: #ff3c41;}
 .bc-codepen-6  { color: #76daff; }
 .bc-codepen-6-bg { background-color: #76daff;}
+.bc-coinbase  { color: #0667d0; }
+.bc-coinbase-bg { background-color: #0667d0;}
 .bc-connexxion  { color: #d2ea32; }
 .bc-connexxion-bg { background-color: #d2ea32;}
 .bc-connexxion-2  { color: #016773; }
