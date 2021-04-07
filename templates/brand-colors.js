@@ -6,5 +6,5 @@
 */
 
 {% for company in companies %}
-export const {{company.name}} = () => {{company.color}}
+exports.{{company.name}} = [{% for color in company.color %}"{{color}}",{% endfor %}]
 {% endfor %}

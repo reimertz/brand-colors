@@ -46,6 +46,7 @@ function find(name) {
 }
 
 exports._brandColors = _brandColors
+exports.jsColors = require('../dist/latest/js/brand-colors.latest')
 exports.getAll = getAll
 exports.getByGroup = getByGroup
 exports.find = find

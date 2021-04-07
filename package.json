@@ -17,7 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "camel-case": "^4.1.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-cached": "~1.1.1",
     "gulp-clean": "~0.4.0",
     "gulp-csslint": "~1.0.1",
@@ -32,6 +32,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.0",
     "gulp-swig": "^0.9.1",
+    "gulp-task-listing": "^1.1.0",
     "gulp-uglify": "~3.0.2",
     "gulp-util": "~3.0.8",
     "lazypipe": "~1.0.2",
