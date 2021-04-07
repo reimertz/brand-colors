@@ -5,14 +5,30 @@ var gulp = require('gulp'),
     g = require('gulp-load-plugins')({lazy: false}),
     noop = g.util.noop,
     swig = require('gulp-swig'),
-    companies = require('../data/brandColors.js').getAll(),
+    companies = require('../data/brandColors.js'),
     version = require('../package.json').version,
     template = {
       version: version,
-      companies: companies
-    };
+      companies: companies.getAll()
+    },
+    js_template = {
+      version: version,
+      companies: companies.getByGroup()
+    },;
 
-gulp.task('styles-dist', ['render-css','render-scss','render-less', 'render-sass', 'render-stylus'], noop);
+gulp.task('styles-dist', ['render-css','render-scss','render-less',
+  'render-sass', 'render-stylus'/*'render-js'*/], noop);
+
+gulp.task('render-js', function () {
+  return gulp.src(['templates/brand-colors.js'])
+    .on('error', g.notify.onError('<%= error.message%>'))
+    .pipe(g.data(js_template))
+    .pipe(swig())
+    .pipe(g.rename('brand-colors.latest.js'))
+    .pipe(gulp.dest('dist/latest/js/'))
+    .pipe(g.rename('brand-colors.' + version + '.js'))
+    .pipe(gulp.dest('dist/'+ version + '/js/'));
+});
 
 gulp.task('render-scss', function () {
   return gulp.src(['templates/brand-colors.scss'])
