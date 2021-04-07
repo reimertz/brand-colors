@@ -52,23 +52,23 @@ gulp.task('dev-js', function() {
   return gulp.src(['./app/scripts/index.js']).pipe(gulp.dest('.tmp/'))
 })
 
-gulp.task('dev-build', [
+gulp.task('dev-build', gulp.series(
   'dev-brand-colors-css',
   'dev-scss',
   'dev-jade',
   'dev-js',
   'dev-extras'
-])
+))
 
-gulp.task('live-server', ['dev-build'], function() {
+gulp.task('live-server', gulp.series('dev-build', function() {
   var server = g.liveServer.static(['.tmp/'], 3000)
   server.start()
-  gulp.watch('./data/brandColors.js', ['dev-brand-colors-css', 'dev-jade'])
-  gulp.watch('./app/stylesheets/*.scss', ['dev-css'])
-  gulp.watch('./app/scripts/*.js', ['dev-js'])
-  gulp.watch('./app/*.jade', ['dev-jade'])
+  gulp.watch('./data/brandColors.js', gulp.series('dev-brand-colors-css', 'dev-jade'))
+  gulp.watch('./app/stylesheets/*.scss', gulp.series('dev-scss'))
+  gulp.watch('./app/scripts/*.js', gulp.series('dev-js'))
+  gulp.watch('./app/*.jade', gulp.series('dev-jade'))
 
   gulp.watch('./.tmp/*', function(file) {
     server.notify.apply(server, [file])
   })
-})
+}))

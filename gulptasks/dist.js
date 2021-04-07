@@ -5,14 +5,40 @@ var gulp = require('gulp'),
     g = require('gulp-load-plugins')({lazy: false}),
     noop = g.util.noop,
     swig = require('gulp-swig'),
-    companies = require('../data/brandColors.js').getAll(),
+    camelCase = require('camel-case').camelCase,
+    companies = require('../data/brandColors.js'),
     version = require('../package.json').version,
     template = {
       version: version,
-      companies: companies
+      companies: companies.getAll()
     };
 
-gulp.task('styles-dist', ['render-css','render-scss','render-less', 'render-sass', 'render-stylus'], noop);
+function camelCaseNames(company) {
+  if (typeof company === 'object') {
+    return company.map(comp => ({ name: camelCase(comp.name), color: comp.color }))
+  }
+}
+
+function fixCompanyNames(company) {
+  let result = camelCaseNames(company)
+  if (typeof result === 'object') {
+    return result.map(comp => ({ name: `${comp.name.match(/^\d/) ? '_' : ''}${comp.name}`, color: comp.color }))
+  }
+}
+
+gulp.task('render-js', function () {
+  return gulp.src(['templates/brand-colors.js'])
+    .on('error', g.notify.onError('<%= error.message%>'))
+    .pipe(g.data({
+      version: version,
+      companies: fixCompanyNames(companies.getByGroup())
+    }))
+    .pipe(swig())
+    .pipe(g.rename('brand-colors.latest.js'))
+    .pipe(gulp.dest('dist/latest/js/'))
+    .pipe(g.rename('brand-colors.' + version + '.js'))
+    .pipe(gulp.dest('dist/'+ version + '/js/'));
+});
 
 gulp.task('render-scss', function () {
   return gulp.src(['templates/brand-colors.scss'])
@@ -75,3 +101,5 @@ gulp.task('render-css', function () {
     .pipe(gulp.dest('dist/latest/css/'));
 });
 
+gulp.task('styles-dist', gulp.series('render-css', 'render-scss', 'render-less',
+  'render-sass', 'render-stylus', 'render-js', noop));

@@ -27,11 +27,12 @@ function getAll() {
 }
 
 function getByGroup(brandName) {
-  if (!brandName) return _groupedColors
-  else if (typeof brandName == 'object') {
-    var collection = {}
+  if (!brandName) {
+    return Object.keys(_groupedColors).map(name => ({ name: name, color: _groupedColors[name] }))
+  } else if (typeof brandName == 'object') {
+    var collection = []
     for (var i = 0; i < brandName.length; i++) {
-      collection[brandName[i]] = getByGroup(brandName[i])
+      collection.push({ name: brandName[i], color: getByGroup(brandName[i]) })
     }
     return collection
   }
@@ -45,6 +46,7 @@ function find(name) {
 }
 
 exports._brandColors = _brandColors
+exports.jsColors = require('../dist/latest/js/brand-colors.latest')
 exports.getAll = getAll
 exports.getByGroup = getByGroup
 exports.find = find
