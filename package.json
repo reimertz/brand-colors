@@ -34,7 +34,7 @@
     "gulp-uglify": "~3.0.2",
     "gulp-util": "~3.0.8",
     "lazypipe": "~1.0.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "opn": "~6.0.0",
     "require-dir": "^1.2.0",
     "sass": "~1.23.7"
