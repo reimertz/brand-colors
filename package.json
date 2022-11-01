@@ -16,7 +16,7 @@
   "author": "Piérre Reimertz",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-cached": "~1.1.1",
     "gulp-clean": "~0.4.0",
     "gulp-csslint": "~1.0.1",
